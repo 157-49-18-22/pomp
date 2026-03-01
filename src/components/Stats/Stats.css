@@ -23,7 +23,9 @@
     -webkit-text-stroke: 0.4px rgba(255, 255, 255, 0.5);
 
     /* Purple-ish inner fill */
-    background: linear-gradient(180deg, rgba(237, 103, 174, 0.9) 0%, rgba(176, 98, 235, 0.3) 100%);
+    background: linear-gradient(90deg, #FF3BFF, #ECBFBF, #5C24FF, #D94FD5, #FF3BFF);
+    background-size: 300% 100%;
+    animation: gradient-move 4s linear infinite;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

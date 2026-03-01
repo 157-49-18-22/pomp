@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.css';
 
-// Small 3D Ribbon for Footer matches Navbar exactly
+// Small 3D Ribbon for Footer (top logo area)
 const SmallRibbonSVG = ({ className }) => (
     <svg width="26" height="26" viewBox="100 80 320 350" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
         <path d="M120 400C160 480 250 480 300 400L420 220"
@@ -27,6 +27,8 @@ const SmallRibbonSVG = ({ className }) => (
         </defs>
     </svg>
 );
+
+
 
 // Map Pin SVG
 const LocationIcon = () => (
@@ -104,6 +106,13 @@ const Footer = () => {
                         <button className="btn-get-started">Get Started</button>
                     </div>
 
+                </div>
+
+                {/* Big Watermark Brand Row */}
+                <div className="footer-watermark-row">
+                    <span className="footer-watermark-text">POMP</span>
+                    <img src="/hero.png" alt="Pomp & Pepper Icon" className="footer-watermark-icon" />
+                    <span className="footer-watermark-text">PEPPER</span>
                 </div>
 
                 {/* Bottom Bar */}

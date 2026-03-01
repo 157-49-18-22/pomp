@@ -50,7 +50,9 @@
 }
 
 .btn-primary {
-    background: linear-gradient(90deg, #b062eb, #ed67ae);
+    background: linear-gradient(90deg, #FF3BFF, #ECBFBF, #5C24FF, #D94FD5, #FF3BFF);
+    background-size: 300% 100%;
+    animation: gradient-move 4s linear infinite;
     color: #fff;
     padding: 16px 32px;
     border-radius: 40px;
@@ -61,7 +63,7 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
     /* Bouncy feel */
 }
 

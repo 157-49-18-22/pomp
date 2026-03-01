@@ -49,7 +49,9 @@
     width: 38px;
     height: 38px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #b062eb, #ed67ae);
+    background: linear-gradient(90deg, #FF3BFF, #ECBFBF, #5C24FF, #D94FD5, #FF3BFF);
+    background-size: 300% 100%;
+    animation: gradient-move 4s linear infinite;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -143,6 +145,36 @@
 .btn-get-started:hover {
     background-color: #27272a;
     border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Watermark Brand Row */
+.footer-watermark-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 0;
+    overflow: hidden;
+    padding: 1rem 0 0.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-watermark-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(4rem, 12vw, 9rem);
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.07);
+    user-select: none;
+    line-height: 1;
+}
+
+.footer-watermark-icon {
+    opacity: 0.18;
+    flex-shrink: 0;
+    width: clamp(60px, 8vw, 110px);
+    height: clamp(60px, 8vw, 110px);
 }
 
 /* Bottom Bar */
