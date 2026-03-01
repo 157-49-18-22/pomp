@@ -54,12 +54,7 @@ const Footer = () => {
                     {/* Column 1: Brand */}
                     <div className="footer-brand">
                         <div className="footer-logo">
-                            <span className="logo-text-bold">Pomp</span>
-                            <div className="logo-ampersand-wrap">
-                                <span className="logo-ampersand-text">&amp;</span>
-                            </div>
-                            <span className="logo-text-bold">Pepper</span>
-                            <div className="footer-logo-subtext">Strategy. Spectacle. Scale</div>
+                            <img src="/logo.png" alt="Pomp & Pepper Logo" className="footer-logo-img" />
                         </div>
                         <p className="footer-brand-desc">
                             Elevating brands through strategic<br />
