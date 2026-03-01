@@ -5,6 +5,7 @@
     min-height: 80vh;
     padding-top: 4rem;
     padding-bottom: 4rem;
+    position: relative;
 }
 
 .hero-content {
@@ -146,6 +147,7 @@
         padding-top: 8rem;
         /* Space for fixed navbar */
         min-height: auto;
+        padding-bottom: 4rem;
     }
 
     .hero-content {
@@ -154,6 +156,8 @@
         flex-direction: column;
         align-items: center;
         max-width: 100%;
+        position: relative;
+        z-index: 2;
     }
 
     .hero-title {
@@ -167,21 +171,31 @@
         font-size: 1.1rem;
     }
 
+    /* Icon behind the text as background on tablet/mobile */
     .hero-visual {
-        margin-top: 3rem;
-        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: 100%;
+        justify-content: center;
+        z-index: 0;
+        opacity: 0.13;
+        pointer-events: none;
+        margin-top: 0;
     }
 
     .hero-graphic-image-wrapper {
-        width: 400px;
-        height: 400px;
+        width: 420px;
+        height: 420px;
     }
 }
 
 @media (max-width: 600px) {
     .hero-section {
         padding-top: 5.5rem;
+        min-height: auto;
+        padding-bottom: 4rem;
     }
 
     .hero-title {
@@ -207,8 +221,9 @@
         padding: 14px 24px;
     }
 
+    /* Larger icon in background on small mobile */
     .hero-graphic-image-wrapper {
-        width: 300px;
-        height: 300px;
+        width: 340px;
+        height: 340px;
     }
 }
