@@ -1,0 +1,320 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.2rem 0;
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.nav-inner {
+    background-color: rgba(9, 9, 11, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50px;
+    padding: 8px 12px 8px 30px;
+    width: 90%;
+    max-width: 1200px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1001;
+}
+
+/* Logo Area */
+.logo-area {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.navbar-logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    animation: gentleFloat 4s ease-in-out infinite;
+    position: relative;
+    z-index: 2;
+}
+
+/* Nav Menu Container */
+.nav-menu-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.menu-bg-icon {
+    display: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+/* Button Classes */
+.btn-contact {
+    background: linear-gradient(90deg, #b062eb, #ed67ae);
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+}
+
+.desktop-only {
+    display: block;
+}
+
+.mobile-only {
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger {
+    width: 24px;
+    height: 18px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+    .navbar {
+        padding: 0.8rem 0;
+    }
+
+    .nav-inner {
+        width: 92%;
+        padding: 8px 12px 8px 20px;
+    }
+
+    .navbar-logo-img {
+        height: 32px;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu-container {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 60%;
+        /* Stylish half-ish width */
+        height: 100vh;
+        background: rgba(10, 10, 13, 0.98);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        flex-direction: column;
+        justify-content: flex-start;
+        /* Align to top/left area */
+        align-items: flex-start;
+        /* Left align items */
+        padding: 6rem 2.5rem;
+        transition: right 0.6s cubic-bezier(0.85, 0, 0.15, 1);
+        z-index: 2000;
+        border-left: 2px solid rgba(168, 85, 247, 0.3);
+        /* Premium accent border */
+        box-shadow: -20px 0 50px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        /* Prevent icons spilling out */
+    }
+
+    .nav-menu-container.open {
+        right: 0;
+    }
+
+    /* Decorative Icons Styling - Now more visible and stylish */
+    .menu-bg-icon {
+        display: block;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        opacity: 0.15;
+        pointer-events: none;
+        z-index: 0;
+        object-fit: cover;
+        border-radius: 20px;
+        filter: blur(0.5px) drop-shadow(0 0 10px rgba(168, 85, 247, 0.4));
+        animation: slowDrift 20s ease-in-out infinite alternate;
+    }
+
+    .menu-bg-icon.icon-1 {
+        top: 10%;
+        left: -30px;
+        transform: rotate(-15deg);
+        width: 120px;
+        height: 120px;
+    }
+
+    .menu-bg-icon.icon-2 {
+        bottom: 15%;
+        right: -20px;
+        transform: rotate(10deg) scale(1.1);
+    }
+
+    .menu-bg-icon.icon-3 {
+        top: 45%;
+        left: 20%;
+        transform: rotate(45deg) scale(0.6);
+        opacity: 0.1;
+    }
+
+    @keyframes slowDrift {
+        0% {
+            transform: translate(0, 0) rotate(0deg);
+        }
+
+        100% {
+            transform: translate(20px, 30px) rotate(15deg);
+        }
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        /* Left align items */
+        gap: 1.8rem;
+        width: 100%;
+    }
+
+    .nav-links a {
+        font-size: 1.4rem;
+        color: #fff;
+        font-weight: 600;
+        letter-spacing: 1px;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    /* Stylish indicator on active/hover */
+    .nav-links a::after {
+        content: '';
+        position: absolute;
+        left: -15px;
+        top: 50%;
+        width: 6px;
+        height: 6px;
+        background: linear-gradient(90deg, #b062eb, #ed67ae);
+        border-radius: 50%;
+        opacity: 0;
+        transform: translateY(-50%) scale(0);
+        transition: all 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        padding-left: 10px;
+        color: #ed67ae;
+    }
+
+    .nav-links a:hover::after {
+        opacity: 1;
+        transform: translateY(-50%) scale(1);
+    }
+
+    .nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease;
+        z-index: 1500;
+    }
+
+    .nav-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu-toggle {
+        z-index: 2001;
+    }
+
+    .menu-toggle.open .hamburger span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle.open .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.open .hamburger span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .mobile-only {
+        display: block;
+        margin-top: 3rem;
+    }
+}
+
+@keyframes gentleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+}

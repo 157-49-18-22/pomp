@@ -1,0 +1,215 @@
+.capabilities-section {
+    padding: 6rem 2rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.capabilities-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.capabilities-header .section-subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.capabilities-header .section-title {
+    font-size: 3rem;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.ecosystem-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.ecosystem-card {
+    background: rgba(22, 19, 29, 0.4);
+    /* Dark muted purple/grey bg matching the screenshot */
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.ecosystem-card:hover {
+    background: rgba(28, 23, 38, 0.6);
+    border-color: rgba(168, 85, 247, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.icon-wrapper {
+    background: rgba(168, 85, 247, 0.08);
+    /* Faint purple background behind the icon */
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+/* --- Icon Continuous Animations --- */
+.ecosystem-card:nth-child(1) .icon-wrapper svg {
+    /* Compass: Gentle pendulum swing */
+    animation: pendulum 3s ease-in-out infinite alternate;
+    transform-origin: top center;
+}
+
+.ecosystem-card:nth-child(2) .icon-wrapper svg {
+    /* Heart: Double heartbeat pulse */
+    animation: heartbeat 2s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.ecosystem-card:nth-child(3) .icon-wrapper svg {
+    /* Trending Arrow: Floating diagonally */
+    animation: floatArrow 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes pendulum {
+    0% {
+        transform: rotate(-12deg);
+    }
+
+    100% {
+        transform: rotate(12deg);
+    }
+}
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.15);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.15);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+}
+
+@keyframes floatArrow {
+    0% {
+        transform: translate(-3px, 3px);
+    }
+
+    100% {
+        transform: translate(3px, -3px);
+    }
+}
+
+.card-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.3;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+.card-desc {
+    color: #a1a1aa;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+    /* Pushes the list down so all lists align at the bottom if descriptions vary */
+}
+
+/* Custom bullet list */
+.card-list {
+    list-style: none;
+    /* Remove default bullets */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.card-list li {
+    color: #83838e;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 1rem;
+    /* Space for the bullet point */
+    transition: color 0.2s ease;
+}
+
+.ecosystem-card:hover .card-list li {
+    color: #a1a1aa;
+}
+
+.card-list li::before {
+    content: "•";
+    color: #a855f7;
+    /* Purple bullet */
+    font-size: 1.5rem;
+    /* Larger bullet */
+    position: absolute;
+    left: -2px;
+    /* Pull left slightly to align */
+    top: -6px;
+    /* Adjust vertical center */
+}
+
+/* Responsive Grid */
+@media (max-width: 1024px) {
+    .ecosystem-cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .capabilities-section {
+        padding: 4rem 1.5rem;
+    }
+
+    .capabilities-header {
+        margin-bottom: 3rem;
+    }
+
+    .capabilities-header .section-title {
+        font-size: 2.2rem;
+    }
+
+    .ecosystem-cards-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .ecosystem-card {
+        padding: 2rem 1.5rem;
+    }
+}

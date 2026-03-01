@@ -1,0 +1,47 @@
+/* Main Layout Constraints */
+.main-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+/* Base button styling */
+button {
+  cursor: pointer;
+  border: none;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* --- Scroll Reveal Animations --- */
+.reveal-on-scroll {
+  opacity: 0;
+  transition: all 1.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: transform, opacity;
+}
+
+/* Base states: Reveal from right for odd, Reveal from left for even */
+.reveal-on-scroll:nth-child(odd) {
+  transform: translateX(100px);
+}
+
+.reveal-on-scroll:nth-child(even) {
+  transform: translateX(-100px);
+}
+
+/* When active (in view) */
+.reveal-on-scroll.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Reset for elements that shouldn't animate */
+.navbar,
+.bg-blob,
+.bg-pattern-container {
+  opacity: 1 !important;
+  transform: none !important;
+}

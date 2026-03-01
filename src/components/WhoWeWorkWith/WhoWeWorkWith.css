@@ -1,0 +1,440 @@
+.work-section {
+    padding: 6rem 2rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.work-header {
+    text-align: center;
+    margin-bottom: 5rem;
+    max-width: 900px;
+}
+
+.work-header .section-title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 2rem;
+}
+
+.work-desc {
+    color: #a1a1aa;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.work-card {
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    /* Fixed height for consistent cards */
+    transition: transform 0.3s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px -10px rgba(176, 98, 235, 0.15);
+    /* Purple glow on hover */
+}
+
+/* Theme variations */
+.theme-light {
+    background-color: #f4efe8;
+    /* Warm cream/bone color */
+    color: #1a1a1c;
+    /* Dark text */
+}
+
+.theme-dark {
+    background-color: #2b233a;
+    /* Dark purple/grey */
+    color: #ffffff;
+    /* Light text */
+}
+
+/* Card Content Area */
+.work-card-content {
+    padding: 0 1.5rem 2rem 1.5rem;
+    margin-top: auto;
+    /* Pushes content to the bottom */
+}
+
+.theme-light .work-card-title {
+    color: #000;
+}
+
+.theme-dark .work-card-title {
+    color: #fff;
+}
+
+.work-card-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+}
+
+.theme-light .work-card-desc {
+    color: #4a4a52;
+}
+
+.theme-dark .work-card-desc {
+    color: #a1a1aa;
+}
+
+.work-card-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Phone Mockup 3D Logic */
+.work-card-visuals {
+    position: relative;
+    height: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    /* Important for 3D tilts */
+    overflow: hidden;
+    /* Hide cutoff bottoms */
+}
+
+.mockup-phone {
+    position: absolute;
+    width: 130px;
+    height: 270px;
+    border-radius: 20px;
+
+    /* Complex box shadow to simulate 3D edge depth and environmental shadow */
+    box-shadow:
+        inset 0 0 0 1px #1a1a1c,
+        /* Inner bezel */
+        inset 0 0 0 4px #000,
+        /* Outer bezel */
+        -5px 10px 20px rgba(0, 0, 0, 0.4),
+        /* Drop shadow */
+        -15px 30px 40px rgba(0, 0, 0, 0.3);
+    /* Soft ambient shadow */
+
+    background: #000;
+    /* Soft metallic grey frame */
+    border: 3px solid #666;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    perspective: 1000px;
+}
+
+/* Light mode specific phone styling */
+.light-ui {
+    background: #fff;
+    /* Silver metallic border */
+    border-color: #d8d8d8;
+    box-shadow:
+        inset 0 0 0 1px #e0e0e0,
+        inset 0 0 0 5px #fff,
+        -5px 10px 20px rgba(0, 0, 0, 0.1),
+        -15px 30px 40px rgba(0, 0, 0, 0.05);
+    /* Lighter shadow for silver phones */
+}
+
+.light-ui.phone-back {
+    border-color: #c0c0c0;
+}
+
+/* Dynamic Island (Modern Notch) */
+.phone-notch {
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 42px;
+    height: 12px;
+    background-color: #000;
+    border-radius: 12px;
+    /* Pill shape */
+    z-index: 10;
+    box-shadow: inset 0px 0px 2px rgba(255, 255, 255, 0.1);
+}
+
+.light-ui .phone-notch {
+    background-color: #000;
+}
+
+/* Screen area */
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 18px;
+    /* Curve inside the bezel */
+}
+
+/* Realistic Glass Glare Effect */
+.phone-glare {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.4) 0%,
+            rgba(255, 255, 255, 0.05) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    transform: rotate(20deg);
+    pointer-events: none;
+    z-index: 5;
+    animation: glareSweep 6s infinite linear;
+}
+
+@keyframes glareSweep {
+    0% {
+        transform: rotate(20deg) translateY(-80%);
+    }
+
+    100% {
+        transform: rotate(20deg) translateY(80%);
+    }
+}
+
+.dark-ui .phone-screen {
+    background-color: #111;
+}
+
+.light-ui .phone-screen {
+    background-color: #fff;
+}
+
+/* Realistic OS UI Elements */
+.real-ui-topbar {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 100%;
+    padding: 2px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 7px;
+    font-family: -apple-system, sans-serif;
+    font-weight: 600;
+    color: #fff;
+    z-index: 20;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.light-ui .real-ui-topbar {
+    color: #000;
+    text-shadow: none;
+}
+
+.ui-time {
+    letter-spacing: 0.2px;
+}
+
+.ui-icons {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+}
+
+.ui-icon-dot {
+    width: 8px;
+    height: 5px;
+    background: currentColor;
+    border-radius: 2px;
+}
+
+.ui-icon-battery {
+    width: 12px;
+    height: 6px;
+    border: 1px solid currentColor;
+    border-radius: 2px;
+    position: relative;
+}
+
+.ui-icon-battery::after {
+    content: '';
+    position: absolute;
+    right: -2px;
+    top: 1px;
+    width: 1px;
+    height: 2px;
+    background: currentColor;
+}
+
+.real-ui-bottombar {
+    position: absolute;
+    bottom: 6px;
+    left: 8px;
+    right: 8px;
+    height: 28px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 20;
+    border: 0.5px solid rgba(255, 255, 255, 0.15);
+}
+
+.light-ui .real-ui-bottombar {
+    background: rgba(255, 255, 255, 0.6);
+    border: 0.5px solid rgba(0, 0, 0, 0.05);
+}
+
+.ui-tab {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.light-ui .ui-tab {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.ui-tab.active {
+    background: #fff;
+    width: 20px;
+}
+
+.light-ui .ui-tab.active {
+    background: #000;
+}
+
+/* Rotations and Animations for 3D effect matching the mockup */
+.phone-back {
+    transform: rotateZ(-8deg) rotateY(-15deg) rotateX(10deg) translate(-25px, -15px) scale(0.9);
+    z-index: 1;
+    filter: brightness(0.7);
+    /* Continuous sliding/peeking out animation */
+    animation: peekOut 4s ease-in-out infinite alternate;
+}
+
+@keyframes peekOut {
+    0% {
+        transform: rotateZ(-5deg) rotateY(-10deg) rotateX(5deg) translate(-15px, -10px) scale(0.9);
+    }
+
+    100% {
+        transform: rotateZ(-12deg) rotateY(-20deg) rotateX(15deg) translate(-50px, -20px) scale(0.85);
+    }
+}
+
+.theme-light .phone-back {
+    border-color: #e5e5e5;
+}
+
+.phone-front {
+    transform: rotateZ(5deg) rotateY(10deg) rotateX(5deg) translate(20px, 15px);
+    z-index: 2;
+    /* Gentle floating/hovering animation */
+    animation: hoverPhone 3.5s ease-in-out infinite alternate;
+}
+
+@keyframes hoverPhone {
+    0% {
+        transform: rotateZ(5deg) rotateY(10deg) rotateX(5deg) translate(20px, 15px) scale(1);
+        filter: drop-shadow(-10px 20px 25px rgba(0, 0, 0, 0.4));
+    }
+
+    100% {
+        transform: rotateZ(2deg) rotateY(15deg) rotateX(-2deg) translate(25px, 0px) scale(1.03);
+        /* Pops out slightly towards the viewer */
+        filter: drop-shadow(-20px 30px 35px rgba(0, 0, 0, 0.6));
+        /* Shadow gets bigger as it lifts off */
+    }
+}
+
+.theme-light .phone-front {
+    border-color: #ccc;
+}
+
+/* Video simulation for front phone */
+.phone-front .phone-screen {
+    animation: panVideo 8s ease-in-out infinite alternate;
+}
+
+@keyframes panVideo {
+    0% {
+        background-position: 0% 0%;
+        background-size: 140%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+        background-size: 160%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+        background-size: 140%;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .work-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .work-section {
+        padding: 4rem 1.5rem;
+    }
+
+    .work-header .section-title {
+        font-size: 2.8rem;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .work-card {
+        height: auto;
+        min-height: 500px;
+    }
+
+    .mockup-phone {
+        width: 110px;
+        height: 230px;
+    }
+
+    .work-card-visuals {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .work-header .section-title {
+        font-size: 2.2rem;
+    }
+
+    .work-card-title {
+        font-size: 1.6rem;
+    }
+}
