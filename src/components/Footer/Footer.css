@@ -164,8 +164,7 @@
     font-size: clamp(4rem, 12vw, 9rem);
     font-weight: 800;
     letter-spacing: 0.05em;
-    color: transparent;
-    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.07);
+    color: rgba(255, 255, 255, 0.07);
     user-select: none;
     line-height: 1;
 }
@@ -251,5 +250,20 @@
     .legal-links {
         gap: 1.5rem;
         justify-content: center;
+    }
+
+    .footer-watermark-row {
+        gap: 0.8rem;
+    }
+
+    .footer-watermark-text {
+        font-size: clamp(2.5rem, 15vw, 4.5rem);
+        color: rgba(255, 255, 255, 0.12);
+        /* Increased opacity for mobile visibility */
+    }
+
+    .footer-watermark-icon {
+        width: 45px;
+        height: 45px;
     }
 }

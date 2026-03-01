@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Capabilities.css';
 
 const CompassIcon = () => (
@@ -43,67 +43,125 @@ const TrendingIcon = () => (
 );
 
 const Capabilities = () => {
+    const [activeIndex, setActiveIndex] = useState(1);
+    const [phase, setPhase] = useState('center');
+    const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+    const sectionRef = useRef(null);
+
+    const cards = [
+        {
+            icon: <CompassIcon />,
+            title: <>Establishing Brand<br />Foundations</>,
+            longDesc: "We build the core identity and digital infrastructure that serves as the bedrock for all future marketing efforts.",
+            list: ["Visual Identity Design", "Core Tech Stack Setup", "Brand Positioning"]
+        },
+        {
+            icon: <HeartIcon />,
+            title: <>Strengthening Brand<br />Affinity</>,
+            longDesc: "Deepening the connection with your audience through immersive storytelling and community-centric experiences.",
+            list: ["Content Strategy", "Social Engagement", "Community Building"]
+        },
+        {
+            icon: <TrendingIcon />,
+            title: <>Promoting Market<br />Demand</>,
+            longDesc: "Scaling reach and conversion through data-backed performance marketing and strategic advertising funnels.",
+            list: ["Performance Ads", "Funnel Optimization", "Data Analytics"]
+        }
+    ];
+
+    useEffect(() => {
+        const timer = setTimeout(() => setPhase('fan'), 1000);
+        return () => clearTimeout(timer);
+    }, []);
+
+    useEffect(() => {
+        let interval;
+        if (isAutoPlaying) {
+            interval = setInterval(() => {
+                setActiveIndex((prev) => (prev === cards.length - 1 ? 0 : prev + 1));
+            }, 3000);
+        }
+        return () => clearInterval(interval);
+    }, [isAutoPlaying, cards.length]);
+
     return (
-        <section className="capabilities-section container" id="services">
+        <section className="capabilities-section container" id="services" ref={sectionRef}>
             <div className="capabilities-header">
-                <p className="section-subtitle text-gradient">CORE CAPABILITIES</p>
-                <h2 className="section-title text-center">Our Strategic Ecosystem</h2>
+                <p className="section-subtitle">CORE CAPABILITIES</p>
+                <h2 className="section-title">Our Strategic Ecosystem</h2>
             </div>
 
-            <div className="ecosystem-cards-container">
-                {/* Card 1 */}
-                <div className="ecosystem-card">
-                    <div className="icon-wrapper">
-                        <CompassIcon />
-                    </div>
-                    <h3 className="card-title">Establishing Brand<br />Foundations</h3>
-                    <p className="card-desc">
-                        We build the core identity and digital
-                        infrastructure that serves as the bedrock
-                        for all future marketing efforts.
-                    </p>
-                    <ul className="card-list">
-                        <li>Visual Identity Design</li>
-                        <li>Core Tech Stack Setup</li>
-                        <li>Brand Positioning</li>
-                    </ul>
-                </div>
+            <div className="carousel-row-container">
+                <div className="carousel-row">
+                    {[-1, 0, 1].map((offset) => {
+                        let i = (activeIndex + offset + cards.length) % cards.length;
+                        const card = cards[i];
 
-                {/* Card 2 */}
-                <div className="ecosystem-card">
-                    <div className="icon-wrapper">
-                        <HeartIcon />
-                    </div>
-                    <h3 className="card-title">Strengthening Brand<br />Affinity</h3>
-                    <p className="card-desc">
-                        Deepening the connection with your
-                        audience through immersive storytelling
-                        and community-centric experiences.
-                    </p>
-                    <ul className="card-list">
-                        <li>Content Strategy</li>
-                        <li>Social Engagement</li>
-                        <li>Community Building</li>
-                    </ul>
-                </div>
+                        let rotateY = offset * 12;
+                        let opacity = 1;
+                        let scale = offset === 0 ? 1 : 0.8;
+                        let zIndex = 10 - Math.abs(offset);
+                        let translateY = 0;
+                        let transitionDelay = '0s';
 
-                {/* Card 3 */}
-                <div className="ecosystem-card">
-                    <div className="icon-wrapper">
-                        <TrendingIcon />
-                    </div>
-                    <h3 className="card-title">Promoting Market<br />Demand</h3>
-                    <p className="card-desc">
-                        Scaling reach and conversion through
-                        data-backed performance marketing and
-                        strategic advertising funnels.
-                    </p>
-                    <ul className="card-list">
-                        <li>Performance Ads</li>
-                        <li>Funnel Optimization</li>
-                        <li>Data Analytics</li>
-                    </ul>
+                        if (phase === 'center') {
+                            if (offset !== 0) {
+                                opacity = 0;
+                                scale = 0.7;
+                                zIndex = 1;
+                                translateY = -80;
+                            } else {
+                                zIndex = 20;
+                            }
+                        } else if (offset !== 0) {
+                            transitionDelay = `${0.1 * Math.abs(offset)}s`;
+                        }
+
+                        const blur = Math.abs(offset) === 1 ? 'blur(2px)' : 'none';
+
+                        return (
+                            <div
+                                key={i + '-' + offset}
+                                className={`service-card carousel-card ${offset === 0 ? 'active' : ''}`}
+                                style={{
+                                    transform: `scale(${scale}) translateX(${offset * 180}px) translateY(${translateY}px) rotateY(${rotateY}deg)`,
+                                    opacity,
+                                    zIndex,
+                                    filter: blur,
+                                    transition: 'transform 0.7s cubic-bezier(.4,2,.6,1), opacity 0.7s, filter 0.4s',
+                                    transitionDelay,
+                                }}
+                                onMouseEnter={() => setIsAutoPlaying(false)}
+                                onMouseLeave={() => setIsAutoPlaying(true)}
+                                onClick={() => setActiveIndex(i)}
+                            >
+                                <div className="service-card-overlay">
+                                    <div className="icon-wrapper">
+                                        {card.icon}
+                                    </div>
+                                    <div className="service-card-title-gradient">{card.title}</div>
+                                    <div className="service-card-desc">{card.longDesc}</div>
+                                    <ul className="service-card-list">
+                                        {card.list.map((item, idx) => (
+                                            <li key={idx}>{item}</li>
+                                        ))}
+                                    </ul>
+                                    <div className="service-card-arrow">&rarr;</div>
+                                </div>
+                            </div>
+                        );
+                    })}
                 </div>
+            </div>
+
+            <div className="carousel-pagination">
+                {cards.map((_, idx) => (
+                    <button
+                        key={idx}
+                        className={`pagination-dot ${idx === activeIndex ? 'active' : ''}`}
+                        onClick={() => setActiveIndex(idx)}
+                    />
+                ))}
             </div>
         </section>
     );

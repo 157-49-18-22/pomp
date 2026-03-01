@@ -93,7 +93,7 @@ const Testimonials = () => {
             </div>
 
             <div className="testimonials-footer">
-                <a href="#" className="read-more-link">Mehr Bewertungen lesen <span className="arrow">→</span></a>
+
             </div>
         </section>
     );
