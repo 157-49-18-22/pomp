@@ -185,12 +185,14 @@
         position: absolute;
         width: 100px;
         height: 100px;
-        opacity: 0.15;
+        opacity: 0.35;
+        /* Increased for better visibility */
         pointer-events: none;
         z-index: 0;
         object-fit: cover;
         border-radius: 20px;
-        filter: blur(0.5px) drop-shadow(0 0 10px rgba(168, 85, 247, 0.4));
+        filter: drop-shadow(0 0 15px rgba(176, 98, 235, 0.6));
+        /* Enhanced glow */
         animation: slowDrift 20s ease-in-out infinite alternate;
     }
 
