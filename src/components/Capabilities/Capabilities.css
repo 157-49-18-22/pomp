@@ -94,7 +94,6 @@
     animation: border-gradient-move 4s linear infinite;
     box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8), 0 0 40px rgba(168, 85, 247, 0.2);
     opacity: 1 !important;
-    filter: none !important;
 }
 
 @keyframes border-gradient-move {
@@ -232,6 +231,7 @@
     padding-right: 1.5rem;
     /* Safety gap from the border */
     word-wrap: break-word;
+
 
 }
 

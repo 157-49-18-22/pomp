@@ -70,24 +70,27 @@
 }
 
 .philosophy-image-wrapper {
-    flex: 0.8;
+    flex: 0.7;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     position: relative;
-    height: 400px;
-    /* Match approximate height */
+    min-height: 400px;
 }
 
-/* We clip the image to match the cutout look in the mockup (no background) */
 .philosophy-person {
-    height: 120%;
-    width: auto;
-    object-fit: contain;
-    position: absolute;
-    bottom: -4rem;
-    /* Drops down slightly into the bottom section */
-    right: 0;
-    z-index: 3;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+}
+
+.philosophy-person:hover {
+    transform: translateY(-10px) scale(1.02);
 }
 
 /* Bottom Section */

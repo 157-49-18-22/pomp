@@ -56,21 +56,6 @@ const Testimonials = () => {
         <section className="testimonials-section container">
             <div className="testimonials-header">
                 <h2 className="section-title">Testimonial</h2>
-
-                <div className="google-review-badge">
-                    <div className="google-logo">
-                        <GoogleIcon />
-                    </div>
-                    <div className="google-rating-info">
-                        <span className="google-label">Google-Review</span>
-                        <div className="google-stars-wrapper">
-                            <span className="google-score">4.6</span>
-                            <div className="stars-row">
-                                <StarIcon /><StarIcon /><StarIcon /><StarIcon /><StarIcon />
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <div className="reviews-grid">

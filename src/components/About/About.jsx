@@ -30,49 +30,52 @@ const SparklesIcon = () => (
 const About = () => {
     return (
         <section className="about-section container" id="about">
-            <div className="about-image-container">
-                {/* We use a colored placeholder similar to the image background */}
-                <div className="about-image-placeholder">
-                    {/* You can replace this src with your actual image path later */}
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop" alt="Agency Representative" className="temp-image" />
-                    <div className="image-overlay"></div>
-                </div>
+            <div className="about-header">
+                <p className="section-subtitle text-gradient">ABOUT THE AGENCY</p>
             </div>
 
-            <div className="about-content">
-                <p className="section-subtitle text-gradient">ABOUT THE AGENCY</p>
-                <h2 className="section-title">
-                    We Build Foundations for<br />
-                    Sustainable Growth
-                </h2>
-
-                <div className="about-text">
-                    <p>
-                        Pomp & Pepper is more than a marketing agency. We are a technology-first growth partner focused on building strong digital foundations that empower brands to scale without friction.
-                    </p>
-                    <p>
-                        Our team combines analytical precision with creative spectacle to ensure your brand doesn't just get noticed—it stays relevant. We believe in high-quality execution that translates directly to business value.
-                    </p>
+            <div className="about-main-content">
+                <div className="about-image-container">
+                    <div className="about-image-placeholder">
+                        <img src="/left.jpg" alt="Agency Representative" className="temp-image" />
+                        <div className="image-overlay"></div>
+                    </div>
                 </div>
 
-                <div className="features-grid">
-                    <div className="feature-card">
-                        <div className="feature-icon">
-                            <BadgeCheckIcon />
-                        </div>
-                        <div className="feature-info">
-                            <h3 className="feature-title">Strategy First</h3>
-                            <p className="feature-text">Every pixel serves a purpose in your business journey.</p>
-                        </div>
+                <div className="about-content">
+                    <h2 className="section-title">
+                        We Build Foundations for<br />
+                        Sustainable Growth
+                    </h2>
+
+                    <div className="about-text">
+                        <p>
+                            Pomp & Pepper is more than a marketing agency. We are a technology-first growth partner focused on building strong digital foundations that empower brands to scale without friction.
+                        </p>
+                        <p>
+                            Our team combines analytical precision with creative spectacle to ensure your brand doesn't just get noticed—it stays relevant. We believe in high-quality execution that translates directly to business value.
+                        </p>
                     </div>
 
-                    <div className="feature-card">
-                        <div className="feature-icon">
-                            <SparklesIcon />
+                    <div className="features-grid">
+                        <div className="feature-card">
+                            <div className="feature-icon">
+                                <BadgeCheckIcon />
+                            </div>
+                            <div className="feature-info">
+                                <h3 className="feature-title">Strategy First</h3>
+                                <p className="feature-text">Every pixel serves a purpose in your business journey.</p>
+                            </div>
                         </div>
-                        <div className="feature-info">
-                            <h3 className="feature-title">Tech Driven</h3>
-                            <p className="feature-text">Leveraging the latest in AI and digital infrastructure.</p>
+
+                        <div className="feature-card">
+                            <div className="feature-icon">
+                                <SparklesIcon />
+                            </div>
+                            <div className="feature-info">
+                                <h3 className="feature-title">Tech Driven</h3>
+                                <p className="feature-text">Leveraging the latest in AI and digital infrastructure.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

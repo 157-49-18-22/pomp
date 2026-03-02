@@ -32,7 +32,7 @@ const Hero = () => {
                             <path d="M7 17L17 7M17 7H7M17 7V17" />
                         </svg>
                     </button>
-                    <button className="btn-secondary">View Showreel</button>
+                    <button className="btn-secondary">View Company Showreel</button>
                 </div>
             </div>
 

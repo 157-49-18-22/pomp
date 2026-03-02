@@ -92,6 +92,8 @@
     font-family: 'Outfit', sans-serif;
     border: 1px solid rgba(255, 255, 255, 0.2);
     cursor: pointer;
+    display: flex;
+    align-items: center;
     transition: background-color 0.3s ease;
 }
 
@@ -109,8 +111,8 @@
 }
 
 .hero-graphic-image-wrapper {
-    width: 500px;
-    height: 500px;
+    width: 420px;
+    height: 420px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -188,8 +190,8 @@
     }
 
     .hero-graphic-image-wrapper {
-        width: 420px;
-        height: 420px;
+        width: 360px;
+        height: 360px;
     }
 }
 
@@ -225,7 +227,7 @@
 
     /* Larger icon in background on small mobile */
     .hero-graphic-image-wrapper {
-        width: 340px;
-        height: 340px;
+        width: 280px;
+        height: 280px;
     }
 }

@@ -110,9 +110,9 @@ const Footer = () => {
 
                 {/* Big Watermark Brand Row */}
                 <div className="footer-watermark-row">
-                    <span className="footer-watermark-text">POMP</span>
+                    <span className="footer-watermark-text">Pomp</span>
                     <img src="/hero.png" alt="Pomp & Pepper Icon" className="footer-watermark-icon" />
-                    <span className="footer-watermark-text">PEPPER</span>
+                    <span className="footer-watermark-text">Pepper</span>
                 </div>
 
                 {/* Bottom Bar */}

@@ -24,7 +24,7 @@ const Philosophy = () => {
 
                     <div className="philosophy-image-wrapper">
                         {/* Using a placeholder image similar to the professional with laptop */}
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop" alt="Professional with laptop" className="philosophy-person" />
+                        <img src="/bulb.png" alt="Bulb Icon" className="philosophy-person" />
                     </div>
                 </div>
 

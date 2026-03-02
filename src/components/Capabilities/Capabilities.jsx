@@ -104,10 +104,13 @@ const Capabilities = () => {
                         let transitionDelay = '0s';
 
                         // Stacking parameters
-                        let scale = (offset === 0 || hoverIndex === i) ? 1.1 : 0.85;
-                        let translateX = offset * 110; // Overlapping spacing
-                        let rotateY = 0; // Keep cards straight
-                        let opacity = (offset === 0 || hoverIndex === i) ? 1 : 0.6; // Fade side cards
+                        let isHovered = i === hoverIndex;
+                        let isFocused = isHovered || (hoverIndex === null && offset === 0);
+
+                        let scale = isFocused ? 1.0 : 0.85;
+                        let translateX = offset * 110;
+                        let rotateY = 0;
+                        let opacity = isFocused ? 1 : (hoverIndex !== null ? 0.3 : 0.6);
 
                         if (phase === 'center') {
                             if (offset !== 0) {
@@ -122,7 +125,14 @@ const Capabilities = () => {
                             transitionDelay = `${0.1 * Math.abs(offset)}s`;
                         }
 
-                        const blur = (Math.abs(offset) === 1 && hoverIndex !== i) ? 'blur(2px)' : 'none';
+                        // Apply blur specifically when a card is hovered to draw focus
+                        let blurValue = 0;
+                        if (hoverIndex !== null && !isHovered) {
+                            blurValue = 10; // Strong focus blur for non-hovered
+                        } else if (hoverIndex === null && offset !== 0) {
+                            blurValue = 2; // Very subtle depth blur normally
+                        }
+                        const blur = blurValue > 0 ? `blur(${blurValue}px)` : 'none';
 
                         return (
                             <div
