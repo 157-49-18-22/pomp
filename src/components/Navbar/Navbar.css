@@ -38,7 +38,6 @@
     width: auto;
     object-fit: contain;
     transition: transform 0.3s ease;
-    animation: gentleFloat 4s ease-in-out infinite;
     position: relative;
     z-index: 2;
 }
@@ -198,9 +197,6 @@
         z-index: 0;
         object-fit: cover;
         border-radius: 20px;
-        filter: drop-shadow(0 0 15px rgba(176, 98, 235, 0.6));
-        /* Enhanced glow */
-        animation: slowDrift 20s ease-in-out infinite alternate;
     }
 
     .menu-bg-icon.icon-1 {
@@ -224,15 +220,7 @@
         opacity: 0.1;
     }
 
-    @keyframes slowDrift {
-        0% {
-            transform: translate(0, 0) rotate(0deg);
-        }
 
-        100% {
-            transform: translate(20px, 30px) rotate(15deg);
-        }
-    }
 
     .nav-links {
         flex-direction: column;
@@ -320,17 +308,5 @@
 
     .desktop-only {
         display: none;
-    }
-}
-
-@keyframes gentleFloat {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-3px);
     }
 }

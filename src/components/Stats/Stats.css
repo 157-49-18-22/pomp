@@ -3,7 +3,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 3rem 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
     margin-top: 2rem;
 }
 
@@ -18,10 +17,6 @@
     font-family: 'Outfit', sans-serif;
     font-size: 2.8rem;
     font-weight: 700;
-
-    /* Very thin subtle white border */
-
-
     /* Purple-ish inner fill */
     background: linear-gradient(90deg, #FF3BFF, #ECBFBF, #5C24FF, #D94FD5, #FF3BFF);
     background-size: 300% 100%;
@@ -29,13 +24,10 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-
     display: inline-block;
     line-height: 1;
     letter-spacing: 0px;
 }
-
-
 
 .stat-label {
     color: #71717a;
@@ -45,22 +37,12 @@
     font-family: 'Inter', sans-serif;
 }
 
-.stat-divider {
-    width: 1px;
-    height: 60px;
-    background-color: rgba(255, 255, 255, 0.05);
-}
-
 @media (max-width: 900px) {
     .stats-section {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 3rem 1.5rem;
         padding: 4rem 2rem;
-    }
-
-    .stat-divider {
-        display: none;
     }
 
     .stat-item {

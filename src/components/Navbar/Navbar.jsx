@@ -13,11 +13,6 @@ const Navbar = () => {
                 </div>
 
                 <div className={`nav-menu-container ${isMenuOpen ? 'open' : ''}`}>
-                    {/* Decorative Background Icons */}
-                    <img src="/hero.png" className="menu-bg-icon icon-1" alt="" />
-                    <img src="/hero.png" className="menu-bg-icon icon-2" alt="" />
-                    <img src="/hero.png" className="menu-bg-icon icon-3" alt="" />
-
                     <ul className="nav-links">
                         <li><a href="#home" onClick={() => setIsMenuOpen(false)}>Home</a></li>
                         <li><a href="#about" onClick={() => setIsMenuOpen(false)}>About Us</a></li>
