@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Capabilities.css';
 
 const CompassIcon = () => (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className="compass-icon-anim" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 21.5V11" stroke="url(#cap_grad_1)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         <path d="M12 7.5C13.1046 7.5 14 6.60457 14 5.5C14 4.39543 13.1046 3.5 12 3.5C10.8954 3.5 10 4.39543 10 5.5C10 6.60457 10.8954 7.5 12 7.5Z" stroke="url(#cap_grad_1)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         <path d="M4 21.5L9.65 11" stroke="url(#cap_grad_1)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -18,7 +18,7 @@ const CompassIcon = () => (
 );
 
 const HeartIcon = () => (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className="heart-icon-anim" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M20.8401 4.60999C20.3294 4.099 19.7229 3.69364 19.0555 3.41708C18.388 3.14052 17.6726 3 16.9401 3C16.2076 3 15.4922 3.14052 14.8248 3.41708C14.1573 3.69364 13.5508 4.099 13.0401 4.60999L12.0001 5.64999L10.9601 4.60999C9.92842 3.5783 8.52904 2.9987 7.07009 2.9987C5.61114 2.9987 4.21176 3.5783 3.18009 4.60999C2.14842 5.64169 1.56882 7.04106 1.56882 8.50001C1.56882 9.95896 2.14842 11.3583 3.18009 12.39L4.22009 13.43L12.0001 21.21L19.7801 13.43L20.8401 12.39C21.3511 11.8793 21.7564 11.2728 22.033 10.6054C22.3096 9.93792 22.4501 9.22248 22.4501 8.49999C22.4501 7.7775 22.3096 7.06206 22.033 6.39462C21.7564 5.72718 21.3511 5.12068 20.8401 4.60999V4.60999Z" stroke="url(#cap_grad_2)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         <defs>
             <linearGradient id="cap_grad_2" x1="1.5" y1="3" x2="22.5" y2="21.2" gradientUnits="userSpaceOnUse">
@@ -30,7 +30,7 @@ const HeartIcon = () => (
 );
 
 const TrendingIcon = () => (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className="trending-icon-anim" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M23 6L13.5 15.5L8.5 10.5L1 18" stroke="url(#cap_grad_3)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         <path d="M17 6H23V12" stroke="url(#cap_grad_3)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         <defs>
@@ -46,6 +46,7 @@ const Capabilities = () => {
     const [activeIndex, setActiveIndex] = useState(1);
     const [phase, setPhase] = useState('center');
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+    const [hoverIndex, setHoverIndex] = useState(null);
     const sectionRef = useRef(null);
 
     const cards = [
@@ -92,24 +93,28 @@ const Capabilities = () => {
             </div>
 
             <div className="carousel-row-container">
+                <div className="nucleus-bg-text">PEPPER</div>
                 <div className="carousel-row">
                     {[-1, 0, 1].map((offset) => {
                         let i = (activeIndex + offset + cards.length) % cards.length;
                         const card = cards[i];
 
-                        let rotateY = offset * 12;
-                        let opacity = 1;
-                        let scale = offset === 0 ? 1 : 0.8;
-                        let zIndex = 10 - Math.abs(offset);
+                        let zIndex = (hoverIndex === i) ? 100 : 10 - Math.abs(offset);
                         let translateY = 0;
                         let transitionDelay = '0s';
+
+                        // Stacking parameters
+                        let scale = (offset === 0 || hoverIndex === i) ? 1.1 : 0.85;
+                        let translateX = offset * 110; // Overlapping spacing
+                        let rotateY = 0; // Keep cards straight
+                        let opacity = (offset === 0 || hoverIndex === i) ? 1 : 0.6; // Fade side cards
 
                         if (phase === 'center') {
                             if (offset !== 0) {
                                 opacity = 0;
                                 scale = 0.7;
                                 zIndex = 1;
-                                translateY = -80;
+                                translateY = -60;
                             } else {
                                 zIndex = 20;
                             }
@@ -117,22 +122,28 @@ const Capabilities = () => {
                             transitionDelay = `${0.1 * Math.abs(offset)}s`;
                         }
 
-                        const blur = Math.abs(offset) === 1 ? 'blur(2px)' : 'none';
+                        const blur = (Math.abs(offset) === 1 && hoverIndex !== i) ? 'blur(2px)' : 'none';
 
                         return (
                             <div
                                 key={i + '-' + offset}
-                                className={`service-card carousel-card ${offset === 0 ? 'active' : ''}`}
+                                className={`service-card carousel-card ${offset === 0 ? 'active' : ''} ${hoverIndex === i ? 'hovered' : ''}`}
                                 style={{
-                                    transform: `scale(${scale}) translateX(${offset * 180}px) translateY(${translateY}px) rotateY(${rotateY}deg)`,
+                                    transform: `scale(${scale}) translateX(${translateX}px) translateY(${translateY}px) rotateY(${rotateY}deg)`,
                                     opacity,
                                     zIndex,
                                     filter: blur,
-                                    transition: 'transform 0.7s cubic-bezier(.4,2,.6,1), opacity 0.7s, filter 0.4s',
+                                    transition: 'all 0.5s cubic-bezier(0.23, 1, 0.32, 1)',
                                     transitionDelay,
                                 }}
-                                onMouseEnter={() => setIsAutoPlaying(false)}
-                                onMouseLeave={() => setIsAutoPlaying(true)}
+                                onMouseEnter={() => {
+                                    setIsAutoPlaying(false);
+                                    setHoverIndex(i);
+                                }}
+                                onMouseLeave={() => {
+                                    setIsAutoPlaying(true);
+                                    setHoverIndex(null);
+                                }}
                                 onClick={() => setActiveIndex(i)}
                             >
                                 <div className="service-card-overlay">

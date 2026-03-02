@@ -3,16 +3,11 @@ import './Hero.css';
 
 const RightGraphic = () => (
     <div className="hero-graphic-image-wrapper">
-        <video
+        <img
+            src="/hero.png"
+            alt="Hero Graphic"
             className="hero-graphic-image"
-            autoPlay
-            loop
-            muted
-            playsInline
-        >
-            <source src="/video1.webm" type="video/webm" />
-            <source src="/video.mp4" type="video/mp4" />
-        </video>
+        />
     </div>
 );
 

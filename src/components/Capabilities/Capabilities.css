@@ -41,6 +41,23 @@
     z-index: 2;
 }
 
+.nucleus-bg-text {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(10rem, 25vw, 22rem);
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.035);
+    font-family: 'Outfit', sans-serif;
+    pointer-events: none;
+    z-index: 0;
+    letter-spacing: 15px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    user-select: none;
+}
+
 .carousel-row {
     display: flex;
     align-items: center;
@@ -55,16 +72,52 @@
     position: relative;
     overflow: hidden;
     width: 460px;
-    /* Slightly wider */
-    height: 480px;
-    /* Slightly taller */
-    background: #121214;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 32px;
-    margin: 0 -60px;
-    /* Reduced negative margin to decrease overlap */
-    transition: transform 0.7s cubic-bezier(.4, 2, .6, 1), opacity 0.7s, filter 0.4s;
+    height: 420px;
+    border-radius: 40px;
+    margin: 0 -100px;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
     cursor: pointer;
+
+    /* Base border */
+    background: #121214;
+    border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+/* Animated Gradient Border on Hover & Active */
+.service-card:hover,
+.service-card.active {
+    border: 1.5px solid transparent;
+    background: linear-gradient(#121214, #121214) padding-box,
+        linear-gradient(90deg, #FF3BFF, #ECBFBF, #5C24FF, #D94FD5, #FF3BFF) border-box;
+    background-size: 100% 100%, 300% 100%;
+    animation: border-gradient-move 4s linear infinite;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8), 0 0 40px rgba(168, 85, 247, 0.2);
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+@keyframes border-gradient-move {
+    0% {
+        background-position: 0% 0%, 0% 50%;
+    }
+
+    50% {
+        background-position: 0% 0%, 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 0%, 0% 50%;
+    }
+}
+
+.service-card:hover .service-card-overlay {
+    transform: translateY(-8px);
+    /* Content lift effect */
+}
+
+.service-card:hover .service-card-desc {
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .service-card-overlay {
@@ -76,30 +129,93 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    /* Start from top to give more space */
-    padding: 2.5rem;
+    padding: 2.2rem;
     /* Slightly reduced padding */
     z-index: 2;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .icon-wrapper {
     background: rgba(168, 85, 247, 0.1);
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    /* Slightly smaller icon box */
+    height: 44px;
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
     border: 1px solid rgba(168, 85, 247, 0.2);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.compass-icon-anim {
+    animation: compassSpin 6s linear infinite;
+}
+
+.heart-icon-anim {
+    animation: heartBeat 1.5s ease-in-out infinite;
+}
+
+.trending-icon-anim {
+    animation: trendingRise 3s ease-in-out infinite;
+}
+
+@keyframes compassSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes heartBeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.15);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes trendingRise {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(2px, -3px);
+    }
+}
+
+.service-card:hover .icon-wrapper {
+    transform: scale(1.15);
+    background: rgba(168, 85, 247, 0.25);
+    border-color: rgba(168, 85, 247, 0.5);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.2);
 }
 
 .service-card-title-gradient {
-    font-size: 1.8rem;
-    /* Slightly smaller for better fit */
+    font-size: 1.6rem;
+    /* Slightly smaller title */
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
     background: linear-gradient(90deg, #FF3BFF, #ECBFBF, #5C24FF, #D94FD5, #FF3BFF);
     background-size: 300% 300%;
     -webkit-background-clip: text;
@@ -112,7 +228,17 @@
     font-size: 0.95rem;
     color: rgba(255, 255, 255, 0.7);
     line-height: 1.5;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
+    padding-right: 1.5rem;
+    /* Safety gap from the border */
+    word-wrap: break-word;
+
+}
+
+@media (max-width: 1200px) {
+    .service-card-desc {
+        font-size: 0.85rem;
+    }
 }
 
 .service-card-list {
@@ -194,18 +320,18 @@
 @media (max-width: 900px) {
     .service-card {
         width: 300px;
-        height: 300px;
-        margin: 0 -60px;
+        height: 380px;
+        margin: 0 -80px;
     }
 
     .nucleus-bg-text {
-        font-size: 10rem;
+        font-size: clamp(6rem, 20vw, 12rem);
     }
 }
 
 @media (max-width: 480px) {
     .service-card {
-        width: 240px;
+        width: 260px;
         height: 340px;
         margin: 0 -40px;
     }
@@ -219,6 +345,7 @@
     }
 
     .service-card-desc {
-        font-size: 0.8rem;
+        display: none;
+        /* Hide desc on very small screens to save space */
     }
 }
