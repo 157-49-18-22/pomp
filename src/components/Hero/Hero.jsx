@@ -4,7 +4,7 @@ import './Hero.css';
 const RightGraphic = () => (
     <div className="hero-graphic-image-wrapper">
         <img
-            src="/hero.png"
+            src="/herro.png"
             alt="Hero Graphic"
             className="hero-graphic-image"
         />
