@@ -228,12 +228,9 @@
     color: rgba(255, 255, 255, 0.7);
     line-height: 1.5;
     margin-bottom: 1.2rem;
-    padding-right: 1.5rem;
+    padding-right: 2.5rem;
     /* Safety gap from the border */
     word-wrap: break-word;
-
-
-
 }
 
 @media (max-width: 1200px) {
