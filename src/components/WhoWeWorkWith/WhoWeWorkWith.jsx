@@ -4,45 +4,45 @@ import './WhoWeWorkWith.css';
 const projects = [
     {
         id: 1,
-        title: 'App Design',
-        desc: 'Lorem Ipsum is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum',
-        theme: 'light', // Cream bg, dark text
+        title: 'Experiential & Event Architecture',
+        desc: 'Architecting high-stakes physical environments for global tech leaders.',
+        theme: 'light',
         images: [
-            'https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=400&auto=format&fit=crop', // Stadium/Sports
-            'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=400&auto=format&fit=crop'
+            '/new1.png',
+            '/new1.png'
         ],
         mode: 'dark-ui'
     },
     {
         id: 2,
-        title: 'App Design',
-        desc: 'Lorem Ipsum is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum',
-        theme: 'dark', // Dark bg, light text
+        title: 'Multi-Channel Creative Direction',
+        desc: 'Defining the visual narrative for premium lifestyle and IT brands.',
+        theme: 'dark',
         images: [
-            'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=400&auto=format&fit=crop', // Portrait male
-            'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop'
+            '/new2.png',
+            '/new2.png'
         ],
         mode: 'dark-ui'
     },
     {
         id: 3,
-        title: 'App Design',
-        desc: 'Lorem Ipsum is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum',
+        title: 'Retail & Phygital Augmentation',
+        desc: 'Bridging the gap between digital convenience and physical retail impact.',
         theme: 'light',
         images: [
-            'https://images.unsplash.com/photo-1470229722913-7c090be5c520?q=80&w=400&auto=format&fit=crop', // Concert/Red
-            'https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?q=80&w=400&auto=format&fit=crop'
+            '/new3.png',
+            '/new3.png'
         ],
         mode: 'dark-ui'
     },
     {
         id: 4,
-        title: 'App Design',
-        desc: 'Lorem Ipsum is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum',
+        title: 'Enterprise GTM & Lead Generation',
+        desc: 'Driving measurable B2B growth through structured GTM outreach.',
         theme: 'dark',
         images: [
-            'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=400&auto=format&fit=crop', // Pizza/Food
-            'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=400&auto=format&fit=crop' // Food
+            '/new4.png',
+            '/new4.png'
         ],
         mode: 'light-ui'
     }
@@ -78,11 +78,10 @@ const WhoWeWorkWith = () => {
     return (
         <section className="work-section container" id="work">
             <div className="work-header">
-                <h2 className="section-title text-center">Who We Work Best With</h2>
+                <h2 className="section-title text-center">Work in Focus</h2>
+                <h3 className="section-subtitle-large text-center">High-Performance Brand Environments</h3>
                 <p className="work-desc text-center">
-                    Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry's<br />
-                    Standard Dummy Text Ever Since The 1500s. Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting<br />
-                    Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever Since The 1500s.
+                    We design and execute integrated environments that turn brand touchpoints into growth engines. Whether through physical Experiential Architecture or digital Enterprise GTM strategies, our work is engineered to command attention and convert intent into lasting loyalty.
                 </p>
             </div>
 

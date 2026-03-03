@@ -16,7 +16,18 @@
     font-size: 3.5rem;
     line-height: 1.1;
     letter-spacing: -1px;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle-large {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #e0e0e0;
     margin-bottom: 2rem;
+    background: linear-gradient(135deg, #b062eb, #ed67ae);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .work-desc {

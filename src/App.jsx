@@ -8,6 +8,7 @@ import Philosophy from './components/Philosophy/Philosophy';
 import WhoWeWorkWith from './components/WhoWeWorkWith/WhoWeWorkWith';
 import Testimonials from './components/Testimonials/Testimonials';
 import Footer from './components/Footer/Footer';
+import CTA from './components/CTA/CTA';
 import Background from './components/Background/Background';
 import './App.css';
 
@@ -44,6 +45,8 @@ function App() {
       <div className="reveal-on-scroll"><Philosophy /></div>
       <div className="reveal-on-scroll"><WhoWeWorkWith /></div>
       <div className="reveal-on-scroll"><Testimonials /></div>
+
+      <div className="reveal-on-scroll"><CTA /></div>
 
       <Footer />
     </div>

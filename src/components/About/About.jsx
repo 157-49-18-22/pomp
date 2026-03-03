@@ -50,10 +50,10 @@ const About = () => {
 
                     <div className="about-text">
                         <p>
-                            Pomp & Pepper is more than a marketing agency. We are a technology-first growth partner focused on building strong digital foundations that empower brands to scale without friction.
+                            Pomp & Pepper is a tech-first growth partner and full-stack marketing agency. We bridge the gap between analytical precision and creative spectacle to build robust digital infrastructure that empowers brands to scale without friction.
                         </p>
                         <p>
-                            Our team combines analytical precision with creative spectacle to ensure your brand doesn't just get noticed—it stays relevant. We believe in high-quality execution that translates directly to business value.
+                            We transform technical utility into lifestyle authority.
                         </p>
                     </div>
 
@@ -64,7 +64,7 @@ const About = () => {
                             </div>
                             <div className="feature-info">
                                 <h3 className="feature-title">Strategy First</h3>
-                                <p className="feature-text">Every pixel serves a purpose in your business journey.</p>
+                                <p className="feature-text">Architecting GTM strategies where every pixel serves a commercial purpose.</p>
                             </div>
                         </div>
 
@@ -74,7 +74,17 @@ const About = () => {
                             </div>
                             <div className="feature-info">
                                 <h3 className="feature-title">Tech Driven</h3>
-                                <p className="feature-text">Leveraging the latest in AI and digital infrastructure.</p>
+                                <p className="feature-text">Leveraging AI-led marketing and high-performance digital infrastructure.</p>
+                            </div>
+                        </div>
+
+                        <div className="feature-card">
+                            <div className="feature-icon">
+                                <SparklesIcon />
+                            </div>
+                            <div className="feature-info">
+                                <h3 className="feature-title">Scale with Spectacle</h3>
+                                <p className="feature-text">Combining data-led storytelling with high-impact brand experiences</p>
                             </div>
                         </div>
                     </div>

@@ -59,41 +59,44 @@ const Footer = () => {
                             <img src="/logo.png" alt="Pomp & Pepper Logo" className="footer-logo-img" />
                         </div>
                         <p className="footer-brand-desc">
-                            Elevating brands through strategic<br />
-                            precision and digital spectacle.<br />
-                            Let's build something remarkable<br />
-                            together.
+                            Pomp & Pepper Marketing Strategy. Spectacle. Scale.<br />
+                            A technology-first growth partner for B2B tech and<br />
+                            premium consumer lifestyle brands.
                         </p>
                         <div className="footer-socials">
-                            <a href="#" className="social-icon"><span>f</span></a>
-                            <a href="#" className="social-icon"><span>in</span></a>
-                            <a href="#" className="social-icon"><span>𝕏</span></a>
-                            <a href="#" className="social-icon"><span>▶</span></a>
+                            <a href="https://www.facebook.com/share/1AifayycCA/" target="_blank" rel="noopener noreferrer" className="social-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                            </a>
+                            <a href="https://www.linkedin.com/company/pompnpepper/" target="_blank" rel="noopener noreferrer" className="social-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            </a>
+                            <a href="https://www.instagram.com/pompnpepper?igsh=MXU1ZHNrcnVhNDZuZA==" target="_blank" rel="noopener noreferrer" className="social-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                            </a>
                         </div>
                     </div>
 
-                    {/* Column 2: Services */}
+                    {/* Column 2: Our Expertise */}
                     <div className="footer-links-col">
-                        <h4 className="footer-col-title">Services</h4>
+                        <h4 className="footer-col-title">Our Expertise</h4>
                         <ul className="footer-links">
-                            <li><a href="#">Brand Identity</a></li>
-                            <li><a href="#">Digital Strategy</a></li>
-                            <li><a href="#">Growth Marketing</a></li>
-                            <li><a href="#">UI/UX Design</a></li>
-                            <li><a href="#">Web Development</a></li>
+                            <li><a href="#">GTM Strategy & Brand Foundations</a></li>
+                            <li><a href="#">Performance Marketing & Lead Gen</a></li>
+                            <li><a href="#">Experiential & Event Architecture</a></li>
+                            <li><a href="#">Creative Direction & Design</a></li>
                         </ul>
                     </div>
 
-                    {/* Column 3: Contact */}
+                    {/* Column 3: Connect & Location */}
                     <div className="footer-links-col">
-                        <h4 className="footer-col-title">Contact</h4>
+                        <h4 className="footer-col-title">Connect & Location</h4>
                         <div className="footer-contact-item">
                             <div className="contact-icon"><LocationIcon /></div>
-                            <p>DLF Corporate Greens,<br />Faridabad, India</p>
+                            <p>HQ: Puri High Street, Sector 81,<br />Faridabad, India</p>
                         </div>
                         <div className="footer-contact-item">
                             <div className="contact-icon"><EmailIcon /></div>
-                            <p>hello@pompandpepper.com</p>
+                            <p>hello@pompnpepper.com</p>
                         </div>
                     </div>
 
@@ -101,7 +104,7 @@ const Footer = () => {
                     <div className="footer-links-col">
                         <h4 className="footer-col-title">New Business</h4>
                         <p className="footer-business-desc">
-                            Interested in working together? Tell us<br />about your project.
+                            Interested in building together? Tell us about your objectives—we’ll architect the solution.
                         </p>
                         <button className="btn-get-started">Get Started</button>
                     </div>
@@ -117,11 +120,7 @@ const Footer = () => {
 
                 {/* Bottom Bar */}
                 <div className="footer-bottom">
-                    <p className="copyright-text">© 2026 Pomp & Pepper Agency. All rights reserved.</p>
-                    <div className="legal-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                    </div>
+                    <p className="copyright-text">© 2026 Pomp & Pepper Marketing Pvt. Ltd. | All Rights Reserved. | Based in India, Serving Global Tech Ecosystems.</p>
                 </div>
 
             </div>

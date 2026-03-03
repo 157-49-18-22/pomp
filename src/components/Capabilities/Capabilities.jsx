@@ -53,20 +53,20 @@ const Capabilities = () => {
         {
             icon: <CompassIcon />,
             title: <>Establishing Brand<br />Foundations</>,
-            longDesc: "We build the core identity and digital infrastructure that serves as the bedrock for all future marketing efforts.",
-            list: ["Visual Identity Design", "Core Tech Stack Setup", "Brand Positioning"]
-        },
-        {
-            icon: <HeartIcon />,
-            title: <>Strengthening Brand<br />Affinity</>,
-            longDesc: "Deepening the connection with your audience through immersive storytelling and community-centric experiences.",
-            list: ["Content Strategy", "Social Engagement", "Community Building"]
+            longDesc: "We architect the brand identity and digital infrastructure that serves as the bedrock for scalable growth.",
+            list: ["Brand Positioning: Defining your edge.", "Visual Identity: Premium aesthetics.", "Core Tech Setup: Robust systems."]
         },
         {
             icon: <TrendingIcon />,
             title: <>Promoting Market<br />Demand</>,
-            longDesc: "Scaling reach and conversion through data-backed performance marketing and strategic advertising funnels.",
-            list: ["Performance Ads", "Funnel Optimization", "Data Analytics"]
+            longDesc: "Scaling reach and ROI through data-backed performance marketing and high conversion advertising funnels.",
+            list: ["Performance Ads: High-intent targeting.", "Funnel Optimization: Lead to loyalty.", "Data Analytics: Actionable insights."]
+        },
+        {
+            icon: <HeartIcon />,
+            title: <>Strengthening Brand<br />Affinity</>,
+            longDesc: "Deepening audience connection through immersive storytelling and community centric experiences.",
+            list: ["Content Strategy: Narrative-driven.", "Social Engagement: Digital authority.", "Community Building: Brand advocates."]
         }
     ];
 

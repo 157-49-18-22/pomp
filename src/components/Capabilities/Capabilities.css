@@ -46,13 +46,13 @@
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: clamp(10rem, 25vw, 22rem);
-    font-weight: 900;
+    font-size: clamp(10rem, 24vw, 21rem);
+    font-weight: 950;
     color: rgba(255, 255, 255, 0.035);
     font-family: 'Outfit', sans-serif;
     pointer-events: none;
     z-index: 0;
-    letter-spacing: 15px;
+    letter-spacing: 5px;
     white-space: nowrap;
     text-transform: uppercase;
     user-select: none;
@@ -231,6 +231,7 @@
     padding-right: 1.5rem;
     /* Safety gap from the border */
     word-wrap: break-word;
+
 
 
 }
