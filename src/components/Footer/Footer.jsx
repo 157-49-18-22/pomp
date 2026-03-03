@@ -56,7 +56,7 @@ const Footer = () => {
                     {/* Column 1: Brand */}
                     <div className="footer-brand">
                         <div className="footer-logo">
-                            <img src="/logo.png" alt="Pomp & Pepper Logo" className="footer-logo-img" />
+                            <img src="/logo1.png" alt="Pomp & Pepper Logo" className="footer-logo-img" />
                         </div>
                         <p className="footer-brand-desc">
                             Pomp & Pepper Marketing Strategy. Spectacle. Scale.<br />
