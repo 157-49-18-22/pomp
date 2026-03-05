@@ -25,14 +25,14 @@
 /* Image Side */
 .about-image-container {
     flex: 1;
-    max-width: 580px;
+    max-width: 500px;
     position: relative;
-    margin-top: 4rem;
+    margin-top: -2rem;
 }
 
 .about-image-placeholder {
     width: 100%;
-    aspect-ratio: 1 / 1.25;
+    aspect-ratio: 1 / 1.46;
     position: relative;
     overflow: hidden;
     mask-image: radial-gradient(circle at center, black 30%, rgba(0, 0, 0, 0.4) 70%, transparent 100%);

@@ -35,8 +35,14 @@ const Philosophy = () => {
                     </div>
 
                     <div className="philosophy-image-wrapper">
-                        {/* Using a placeholder image similar to the professional with laptop */}
-                        <img src="/bulb.png" alt="Bulb Icon" className="philosophy-person" />
+                        <video
+                            src="/bulb.mp4"
+                            className="philosophy-person"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                        />
                     </div>
                 </div>
 

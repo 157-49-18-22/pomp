@@ -95,12 +95,12 @@
 
 .nav-links a.nav-contact-btn {
     padding: 10px 22px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    border: 1px solid transparent;
     border-radius: 40px;
     transition: all 0.3s ease;
     background-clip: padding-box;
     font-family: 'Outfit', sans-serif;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .nav-links a.nav-contact-btn:hover {
