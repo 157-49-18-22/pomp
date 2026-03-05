@@ -82,7 +82,7 @@ const ContactUs = () => {
                                     <div className="contact-info-icon-wrapper">
                                         <FaPhoneAlt className="contactus-info-icon" />
                                     </div>
-                                    <span>+91 92204 38999</span>
+                                    <span>+91 8368375358</span>
                                 </div>
                                 <div className="contactus-info-item">
                                     <div className="contact-info-icon-wrapper">
