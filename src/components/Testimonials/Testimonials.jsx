@@ -77,14 +77,7 @@ const Testimonials = () => {
 
             <div className="testimonial-card-container">
                 <div className="testimonial-card">
-                    <div className="testimonial-card-image-box">
-                        <img
-                            src={currentReview.avatar}
-                            alt={currentReview.name}
-                            className="testimonial-card-image"
-                            key={`img-${currentReview.id}`}
-                        />
-                    </div>
+
                     <div className="testimonial-card-content">
                         <div className="testimonial-card-top">
 

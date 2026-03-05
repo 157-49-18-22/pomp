@@ -14,6 +14,9 @@ const Philosophy = () => {
                 <div className="float-arrow arrow-1">↑</div>
                 <div className="float-arrow arrow-2">↑</div>
                 <div className="float-arrow arrow-3">↑</div>
+                <div className="float-arrow arrow-4">↑</div>
+                <div className="float-arrow arrow-5">↑</div>
+                <div className="float-arrow arrow-6">↑</div>
             </div>
             <div className="philosophy-container container">
                 {/* Top Section: Text and Image */}
@@ -33,7 +36,7 @@ const Philosophy = () => {
 
                     <div className="philosophy-image-wrapper">
                         {/* Using a placeholder image similar to the professional with laptop */}
-                        <img src="/bulbb.png" alt="Bulb Icon" className="philosophy-person" />
+                        <img src="/bulbbb.png" alt="Bulb Icon" className="philosophy-person" />
                     </div>
                 </div>
 

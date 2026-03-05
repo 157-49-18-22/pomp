@@ -42,19 +42,11 @@ const ZapIcon = () => (
 const About = () => {
     return (
         <section className="about-section container" id="about">
-            <div className="about-header">
-                <p className="section-subtitle text-gradient">ABOUT THE AGENCY</p>
-            </div>
+
 
             <div className="about-main-content">
-                <div className="about-image-container">
-                    <div className="about-image-placeholder">
-                        <img src="/left.jpg" alt="Agency Representative" className="temp-image" />
-                        <div className="image-overlay"></div>
-                    </div>
-                </div>
-
                 <div className="about-content">
+                    <p className="section-subtitle text-gradient">ABOUT THE AGENCY</p>
                     <h2 className="section-title">
                         We Build Foundations for<br />
                         Sustainable Growth
@@ -99,6 +91,13 @@ const About = () => {
                                 <p className="feature-text">Combining data-led storytelling with high-impact brand experiences</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <div className="about-image-container">
+                    <div className="about-image-placeholder">
+                        <img src="/left.jpg" alt="Agency Representative" className="temp-image" />
+                        <div className="image-overlay"></div>
                     </div>
                 </div>
             </div>

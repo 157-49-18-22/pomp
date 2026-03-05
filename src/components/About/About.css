@@ -6,11 +6,13 @@
     gap: 4.5rem;
 }
 
-.about-header {
-    width: 100%;
-    text-align: center;
-    position: relative;
-    z-index: 2;
+.section-subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    display: inline-block;
 }
 
 .about-main-content {
@@ -62,13 +64,7 @@
     margin-top: -5%;
 }
 
-.section-subtitle {
-    font-size: 0.8rem;
-    letter-spacing: 3px;
-    font-weight: 700;
-    margin-bottom: 0;
-    text-transform: uppercase;
-}
+
 
 .section-title {
     font-size: 3.5rem;
