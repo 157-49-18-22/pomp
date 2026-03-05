@@ -7,22 +7,31 @@
     padding: 0;
     display: flex;
     justify-content: center;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-inner {
-    background-color: rgba(9, 9, 11, 0.85);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 15px 5%;
+    background-color: transparent;
+    border-bottom: 1px solid transparent;
+    padding: 24px 5%;
     width: 83%;
     max-width: 83%;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
     z-index: 1001;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar.scrolled .nav-inner {
+    background-color: rgba(9, 9, 11, 0.7);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 15px 5%;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 /* Logo Area */
