@@ -93,7 +93,6 @@ const Capabilities = () => {
             </div>
 
             <div className="carousel-row-container">
-                <div className="nucleus-bg-text">PEPPER</div>
                 <div className="carousel-row">
                     {[-1, 0, 1].map((offset) => {
                         let i = (activeIndex + offset + cards.length) % cards.length;
@@ -139,7 +138,7 @@ const Capabilities = () => {
                                 key={i + '-' + offset}
                                 className={`service-card carousel-card ${offset === 0 ? 'active' : ''} ${hoverIndex === i ? 'hovered' : ''}`}
                                 style={{
-                                    transform: `scale(${scale}) translateX(${translateX}px) translateY(${translateY}px) rotateY(${rotateY}deg)`,
+                                    transform: `scale(${scale}) translateX(calc(${offset} * var(--card-translate-x))) translateY(${translateY}px) rotateY(${rotateY}deg)`,
                                     opacity,
                                     zIndex,
                                     filter: blur,
@@ -167,7 +166,7 @@ const Capabilities = () => {
                                             <li key={idx}>{item}</li>
                                         ))}
                                     </ul>
-                                    <div className="service-card-arrow">&rarr;</div>
+
                                 </div>
                             </div>
                         );

@@ -30,6 +30,13 @@
     display: flex;
     align-items: center;
     position: relative;
+    margin-left: -3.7%;
+}
+
+.logo-area a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
 .navbar-logo-img {
@@ -169,7 +176,10 @@
 
     .nav-inner {
         width: 100%;
+        max-width: none;
         padding: 15px 5%;
+        z-index: 2000;
+        /* Move entire inner above overlay */
     }
 
     .nav-menu-container {
@@ -178,7 +188,7 @@
         transform: none;
         top: 0;
         right: -100%;
-        width: 70%;
+        width: 57%;
         height: 100vh;
         background: rgba(10, 10, 13, 1);
         backdrop-filter: blur(30px);
@@ -186,7 +196,7 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        padding: 6rem 2.5rem;
+        padding: 6rem 1.5rem;
         transition: right 0.6s cubic-bezier(0.85, 0, 0.15, 1);
         z-index: 2000;
         border-left: 2px solid rgba(255, 255, 255, 0.05);
@@ -196,6 +206,9 @@
 
     .nav-menu-container.open {
         right: 0;
+
+        margin-top: -1rem;
+
     }
 
     /* Decorative Icons Styling - Now more visible and stylish */
@@ -227,10 +240,10 @@
     }
 
     .menu-bg-icon.icon-3 {
-        top: 45%;
-        left: 20%;
+        bottom: 45%;
+        left: 30%;
         transform: rotate(45deg) scale(0.6);
-        opacity: 0.1;
+        opacity: 0.15;
     }
 
 
@@ -296,6 +309,7 @@
     }
 
     .menu-toggle {
+        display: flex;
         z-index: 2001;
     }
 

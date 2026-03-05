@@ -5,6 +5,19 @@
     width: 100%;
     overflow: hidden;
     background: #0a0a0a;
+    --card-translate-x: 110px;
+}
+
+@media (max-width: 900px) {
+    .capabilities-section {
+        --card-translate-x: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .capabilities-section {
+        --card-translate-x: 100px;
+    }
 }
 
 .capabilities-header {
@@ -268,17 +281,7 @@
     border-radius: 50%;
 }
 
-.service-card-arrow {
-    font-size: 1.6rem;
-    font-weight: 700;
-    background: linear-gradient(90deg, #FF3BFF, #ECBFBF, #5C24FF, #D94FD5, #FF3BFF);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: gradient-move 3s linear infinite;
-    opacity: 0.8;
-    margin-top: auto;
-}
+
 
 .carousel-pagination {
     display: flex;
@@ -330,20 +333,67 @@
 @media (max-width: 480px) {
     .service-card {
         width: 260px;
-        height: 340px;
+        height: 460px;
         margin: 0 -40px;
+        border-radius: 24px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
     }
 
     .service-card-overlay {
-        padding: 1.5rem;
+        padding: 2rem 1.5rem;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .icon-wrapper {
+        width: 32px;
+        height: 32px;
+        border-radius: 10px;
+        margin-bottom: 1.2rem;
+    }
+
+    .icon-wrapper svg {
+        width: 16px;
+        height: 16px;
     }
 
     .service-card-title-gradient {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        line-height: 1.2;
     }
 
     .service-card-desc {
-        display: none;
-        /* Hide desc on very small screens to save space */
+        font-size: 0.78rem;
+        margin-bottom: 1.5rem;
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 1.5;
+        padding-right: 1.2rem;
+        display: block;
+        -webkit-line-clamp: unset;
+        line-clamp: unset;
+        overflow: visible;
     }
+
+    .service-card-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .service-card-list li {
+        font-size: 0.75rem;
+        padding-left: 1.4rem;
+        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .service-card-list li::before {
+        top: 0.45rem;
+        width: 4px;
+        height: 4px;
+    }
+
+
 }

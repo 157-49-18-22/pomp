@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -9,17 +10,24 @@ const Navbar = () => {
             <div className={`nav-overlay ${isMenuOpen ? 'active' : ''}`} onClick={() => setIsMenuOpen(false)}></div>
             <div className={`nav-inner ${isMenuOpen ? 'menu-active' : ''}`}>
                 <div className="logo-area">
-                    <img src="/logo1.png" alt="Pomp &amp; Pepper Logo" className="navbar-logo-img" />
+                    <Link to="/" onClick={() => setIsMenuOpen(false)}>
+                        <img src="/logo1.png" alt="Pomp &amp; Pepper Logo" className="navbar-logo-img" />
+                    </Link>
                 </div>
 
                 <div className={`nav-menu-container ${isMenuOpen ? 'open' : ''}`}>
                     <ul className="nav-links">
-                        <li><a href="#home" onClick={() => setIsMenuOpen(false)}>Home</a></li>
-                        <li><a href="#about" onClick={() => setIsMenuOpen(false)}>About Us</a></li>
-                        <li><a href="#services" onClick={() => setIsMenuOpen(false)}>Services</a></li>
-                        <li><a href="#work" onClick={() => setIsMenuOpen(false)}>Work</a></li>
-                        <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
+                        <li><Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link></li>
+                        <li><Link to="/#about" onClick={() => setIsMenuOpen(false)}>About Us</Link></li>
+                        <li><Link to="/#services" onClick={() => setIsMenuOpen(false)}>Services</Link></li>
+                        <li><Link to="/#work" onClick={() => setIsMenuOpen(false)}>Work</Link></li>
+                        <li><Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
                     </ul>
+
+                    {/* Decorative Hero Icons */}
+                    <img src="/hero.png" alt="" className="menu-bg-icon icon-1" />
+                    <img src="/hero.png" alt="" className="menu-bg-icon icon-2" />
+                    <img src="/hero.png" alt="" className="menu-bg-icon icon-3" />
 
                     <div className="social-links mobile-only">
                         <a href="https://www.instagram.com/pompnpepper?igsh=MXU1ZHNrcnVhNDZuZA==" target="_blank" rel="noopener noreferrer" className="social-icon">

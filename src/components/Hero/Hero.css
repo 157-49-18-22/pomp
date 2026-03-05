@@ -49,6 +49,10 @@
     align-items: center;
 }
 
+.hero-actions a {
+    text-decoration: none;
+}
+
 .btn-primary {
     background: linear-gradient(90deg, #FF3BFF, #ECBFBF, #5C24FF, #D94FD5, #FF3BFF);
     background-size: 300% 100%;
@@ -59,7 +63,7 @@
     font-size: 1.05rem;
     font-weight: 600;
     font-family: 'Outfit', sans-serif;
-    border: none;
+    border: 1px solid transparent;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -104,10 +108,11 @@
 .hero-visual {
     flex: 1;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     position: relative;
     max-width: 600px;
+    align-self: center;
 }
 
 .hero-graphic-image-wrapper {
@@ -216,6 +221,10 @@
         width: 100%;
         max-width: 300px;
         gap: 1rem;
+    }
+
+    .hero-actions a {
+        width: 100%;
     }
 
     .btn-primary,

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 // Small 3D Ribbon for Footer (top logo area)
@@ -52,14 +53,53 @@ const Footer = () => {
             <div className="container footer-content-wrap">
 
                 <div className="footer-top">
+                    {/* Column 1: Our Expertise */}
+                    <div className="footer-links-col">
+                        <h4 className="footer-col-title">Our Expertise</h4>
+                        <ul className="footer-links">
+                            <li><a href="#">GTM Strategy & Brand Foundations</a></li>
+                            <li><a href="#">Performance Marketing & Lead Gen</a></li>
+                            <li><a href="#">Experiential & Event Architecture</a></li>
+                            <li><a href="#">Creative Direction & Design</a></li>
+                        </ul>
+                    </div>
 
-                    {/* Column 1: Brand */}
-                    <div className="footer-brand">
-                        <div className="footer-logo">
-                            <img src="/logo1.png" alt="Pomp & Pepper Logo" className="footer-logo-img" />
+                    {/* Column 2: Connect & Location */}
+                    <div className="footer-links-col">
+                        <h4 className="footer-col-title">Connect & Location</h4>
+                        <div className="footer-contact-item">
+                            <div className="contact-icon"><LocationIcon /></div>
+                            <p>HQ: Puri High Street, Sector 81,<br />Faridabad, India</p>
                         </div>
+                        <div className="footer-contact-item">
+                            <div className="contact-icon"><EmailIcon /></div>
+                            <p>hello@pompnpepper.com</p>
+                        </div>
+                    </div>
+
+                    {/* Column 3: New Business */}
+                    <div className="footer-links-col">
+                        <h4 className="footer-col-title">New Business</h4>
+                        <p className="footer-business-desc">
+                            Interested in building together?<br />
+                            Tell us about your objectives—we’ll architect the solution.
+                        </p>
+                        <Link to="/contact" style={{ textDecoration: 'none' }}>
+                            <button className="btn-get-started">
+                                Get Started
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="btn-icon">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </button>
+                        </Link>
+                    </div>
+
+                    {/* Column 4: Get in Touch */}
+                    <div className="footer-links-col">
+                        <h4 className="footer-col-title">Get in Touch</h4>
                         <p className="footer-brand-desc">
-                            Pomp & Pepper Marketing Strategy. Spectacle. Scale.<br />
+                            Pomp & Pepper Marketing<br />
+                            Strategy. Spectacle. Scale.<br />
                             A technology-first growth partner for B2B tech and<br />
                             premium consumer lifestyle brands.
                         </p>
@@ -75,47 +115,11 @@ const Footer = () => {
                             </a>
                         </div>
                     </div>
-
-                    {/* Column 2: Our Expertise */}
-                    <div className="footer-links-col">
-                        <h4 className="footer-col-title">Our Expertise</h4>
-                        <ul className="footer-links">
-                            <li><a href="#">GTM Strategy & Brand Foundations</a></li>
-                            <li><a href="#">Performance Marketing & Lead Gen</a></li>
-                            <li><a href="#">Experiential & Event Architecture</a></li>
-                            <li><a href="#">Creative Direction & Design</a></li>
-                        </ul>
-                    </div>
-
-                    {/* Column 3: Connect & Location */}
-                    <div className="footer-links-col">
-                        <h4 className="footer-col-title">Connect & Location</h4>
-                        <div className="footer-contact-item">
-                            <div className="contact-icon"><LocationIcon /></div>
-                            <p>HQ: Puri High Street, Sector 81,<br />Faridabad, India</p>
-                        </div>
-                        <div className="footer-contact-item">
-                            <div className="contact-icon"><EmailIcon /></div>
-                            <p>hello@pompnpepper.com</p>
-                        </div>
-                    </div>
-
-                    {/* Column 4: New Business */}
-                    <div className="footer-links-col">
-                        <h4 className="footer-col-title">New Business</h4>
-                        <p className="footer-business-desc">
-                            Interested in building together? Tell us about your objectives—we’ll architect the solution.
-                        </p>
-                        <button className="btn-get-started">Get Started</button>
-                    </div>
-
                 </div>
 
-                {/* Big Watermark Brand Row */}
-                <div className="footer-watermark-row">
-                    <span className="footer-watermark-text">Pomp</span>
-                    <img src="/hero.png" alt="Pomp & Pepper Icon" className="footer-watermark-icon" />
-                    <span className="footer-watermark-text">Pepper</span>
+                {/* Watermark Image Row */}
+                <div className="footer-mark-wrapper">
+                    <img src="/mark.png" alt="Watermark" className="footer-mark-img" />
                 </div>
 
                 {/* Bottom Bar */}

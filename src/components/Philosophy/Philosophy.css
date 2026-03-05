@@ -1,9 +1,10 @@
 .philosophy-wrapper {
     background-color: #f8f6f5;
-    width: 100%;
+    width: 92%;
     position: relative;
     padding: 6rem 0;
     overflow: hidden;
+    margin-left: 4rem;
 }
 
 .philosophy-container {
@@ -75,7 +76,17 @@
     justify-content: flex-end;
     align-items: center;
     position: relative;
-    min-height: 400px;
+    min-height: 372px;
+    margin-top: 1rem;
+    /* 4-sided fade: all edges dissolve into the page background */
+    -webkit-mask-image:
+        linear-gradient(to right, transparent 0%, black 18%, black 82%, transparent 100%),
+        linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-image:
+        linear-gradient(to right, transparent 0%, black 18%, black 82%, transparent 100%),
+        linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
+    mask-composite: intersect;
 }
 
 .philosophy-person {
@@ -83,14 +94,18 @@
     max-width: 500px;
     height: auto;
     object-fit: cover;
-    border-radius: 30px;
-    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    /* Multiply makes lighter areas of the image merge with the page bg */
+    mix-blend-mode: multiply;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    filter: saturate(1.15) contrast(1.08) brightness(1.02);
 }
 
 .philosophy-person:hover {
-    transform: translateY(-10px) scale(1.02);
+    transform: translateY(-8px) scale(1.03);
+    filter: saturate(1.25) contrast(1.1) brightness(1.04);
 }
 
 /* Bottom Section */
@@ -151,6 +166,7 @@
 @media (max-width: 1024px) {
     .philosophy-wrapper {
         padding: 4rem 1.5rem;
+        margin-left: 1rem;
     }
 
     .philosophy-top {

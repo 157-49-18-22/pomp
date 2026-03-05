@@ -1,0 +1,519 @@
+.contactus-section {
+    padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.contactus-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.contactus-top-section {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0px;
+    /* Join the cards */
+    width: 100%;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(168, 85, 247, 0.15);
+}
+
+.contactus-form-card {
+    background: linear-gradient(120deg, #FF3BFF, #ECBFBF, #5C24FF, #D94FD5, #FF3BFF);
+    background-size: 300% 300%;
+    animation: gradient-anim 10s ease infinite;
+    padding: 60px 50px;
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes gradient-anim {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.contactus-heading {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 40px;
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: -1px;
+}
+
+.contactus-form-modern {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contactus-row {
+    display: flex;
+    gap: 30px;
+}
+
+.contactus-field {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    position: relative;
+}
+
+.contactus-field label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 8px;
+    font-family: 'Inter', sans-serif;
+    opacity: 0.8;
+}
+
+.contactus-field input,
+.contactus-field textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    font-size: 1.15rem;
+    padding: 10px 0;
+    outline: none;
+    color: #111;
+    font-family: 'Inter', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.contactus-field input:focus,
+.contactus-field textarea:focus {
+    border-bottom-color: #111;
+}
+
+.contactus-submit-btn {
+    width: fit-content;
+    background: #111;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    padding: 18px 45px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    align-self: flex-end;
+    margin-top: 20px;
+}
+
+.contactus-submit-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.contactus-info-card {
+    background: #111;
+    color: #fff;
+    padding: 60px 50px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contactus-info-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    font-family: 'Outfit', sans-serif;
+    color: #fff;
+}
+
+.contactus-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.contactus-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'Inter', sans-serif;
+}
+
+.contact-info-icon-wrapper {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #FF3BFF, #ECBFBF, #5C24FF, #D94FD5, #FF3BFF);
+    background-size: 300% 100%;
+    animation: gradient-move 4s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contactus-info-icon {
+    font-size: 1.1rem;
+    color: #fff !important;
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    background-clip: initial !important;
+    -webkit-text-fill-color: initial !important;
+    display: block;
+}
+
+.contactus-info-socials {
+    display: flex;
+    gap: 14px;
+    margin-top: 32px;
+}
+
+/* social-icon style comes from Footer.css via shared class */
+
+
+.contactus-watermark {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    overflow: hidden;
+    pointer-events: none;
+    padding: 0.5rem 0;
+}
+
+.contactus-wm-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(1.6rem, 3vw, 2.6rem);
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.07);
+    user-select: none;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.contactus-wm-icon {
+    opacity: 0.18;
+    flex-shrink: 0;
+    width: clamp(40px, 5vw, 65px);
+    height: clamp(40px, 5vw, 65px);
+    object-fit: contain;
+}
+
+
+
+.contactus-map-card {
+    width: 90%;
+    margin: 0 auto;
+    background: #111;
+    border-radius: 32px;
+    padding: 60px 60px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.contactus-map-card::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 59, 255, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.office-location-header {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.office-location-left {
+    flex: 0 0 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.office-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #FF3BFF, #5C24FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: 'Outfit', sans-serif;
+}
+
+.office-title {
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 800;
+    color: #fff;
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.office-subtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.office-address-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    margin-top: 8px;
+}
+
+.office-address-icon {
+    width: 42px;
+    height: 42px;
+    background: rgba(255, 59, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 59, 255, 0.2);
+}
+
+.office-addr-line {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.75);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.office-directions-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(90deg, #FF3BFF, #5C24FF);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: 'Outfit', sans-serif;
+    padding: 16px 32px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    width: fit-content;
+    margin-top: 8px;
+    letter-spacing: 0.5px;
+}
+
+.office-directions-btn:hover {
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 15px 30px rgba(255, 59, 255, 0.35);
+}
+
+.office-location-right {
+    flex: 1;
+    min-width: 0;
+}
+
+.contactus-map-container {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.contactus-map-heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-family: 'Outfit', sans-serif;
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    .contactus-top-section {
+        flex-direction: column;
+        border-radius: 24px;
+    }
+
+    .contactus-form-card,
+    .contactus-info-card {
+        padding: 40px 30px;
+    }
+
+    .contactus-info-card {
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        text-align: left;
+    }
+}
+
+@media (max-width: 600px) {
+    .contactus-section {
+        padding: 40px 20px;
+        overflow-x: hidden;
+    }
+
+    .contactus-container {
+        width: 100%;
+        box-sizing: border-box;
+        gap: 25px;
+    }
+
+    .contactus-heading {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .contactus-form-modern {
+        gap: 20px;
+    }
+
+    .contactus-field label {
+        font-size: 0.9rem;
+    }
+
+    .contactus-field input,
+    .contactus-field textarea {
+        font-size: 1rem;
+        padding: 8px 0;
+    }
+
+    .contactus-submit-btn {
+        width: 100%;
+        padding: 14px;
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    .contactus-info-card {
+        padding: 30px 20px 60px 20px;
+    }
+
+    .contactus-info-heading {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .contactus-info-list {
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .contactus-info-item {
+        font-size: 0.9rem;
+        gap: 10px;
+    }
+
+    .contactus-info-socials {
+        margin-top: 25px;
+    }
+
+    .contactus-wm-text {
+        font-size: 1.2rem;
+    }
+
+    .contactus-wm-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .contactus-map-card {
+        padding: 30px 20px;
+        border-radius: 20px;
+    }
+
+    .office-location-header {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .office-location-left {
+        width: 100%;
+        align-items: center;
+    }
+
+    .office-title {
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
+
+    .office-subtitle {
+        font-size: 0.85rem;
+        padding: 0 10px;
+    }
+
+    .office-address-block {
+        padding: 15px 10px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .office-addr-line {
+        font-size: 0.9rem;
+        word-break: break-word;
+    }
+
+    .office-directions-btn {
+        width: fit-content;
+        padding: 12px 24px;
+        font-size: 0.9rem;
+        margin: 10px auto 0 auto;
+        justify-content: center;
+    }
+
+    .office-location-right {
+        width: 100%;
+    }
+
+    .contactus-map-container iframe {
+        height: 250px;
+    }
+}

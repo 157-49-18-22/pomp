@@ -78,8 +78,8 @@ const WhoWeWorkWith = () => {
     return (
         <section className="work-section container" id="work">
             <div className="work-header">
-                <h2 className="section-title text-center">Work in Focus</h2>
-                <h3 className="section-subtitle-large text-center">High-Performance Brand Environments</h3>
+                <p className="section-subtitle text-center text-gradient">Work in Focus</p>
+                <h2 className="section-title text-center">High-Performance Brand Environments</h2>
                 <p className="work-desc text-center">
                     We design and execute integrated environments that turn brand touchpoints into growth engines. Whether through physical Experiential Architecture or digital Enterprise GTM strategies, our work is engineered to command attention and convert intent into lasting loyalty.
                 </p>

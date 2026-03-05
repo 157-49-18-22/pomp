@@ -23,7 +23,7 @@ button {
   will-change: transform, opacity;
 }
 
-/* Base states: Reveal from right for odd, Reveal from left for even */
+/* Base states: Reveal displacement */
 .reveal-on-scroll:nth-child(odd) {
   transform: translateX(100px);
 }
@@ -32,10 +32,20 @@ button {
   transform: translateX(-100px);
 }
 
+@media (max-width: 768px) {
+
+  .reveal-on-scroll:nth-child(odd),
+  .reveal-on-scroll:nth-child(even) {
+    transform: translateY(20px);
+    /* Use vertical shift instead of horizontal on mobile */
+  }
+}
+
 /* When active (in view) */
 .reveal-on-scroll.active {
   opacity: 1;
   transform: translateX(0);
+
 }
 
 /* Reset for elements that shouldn't animate */
