@@ -108,8 +108,16 @@
 
 .card-top-decoration {
     margin-bottom: 2.5rem;
-    color: rgba(176, 98, 235, 0.5);
-    /* Gradient start color with opacity */
+    color: #b062eb;
+}
+
+.quote-icon {
+    filter: drop-shadow(0 0 15px rgba(176, 98, 235, 0.4));
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.testimonial-card-v2:hover .quote-icon {
+    transform: rotate(-8deg) scale(1.1);
 }
 
 .testimonial-quote {
@@ -120,6 +128,7 @@
     margin-bottom: 3rem;
     font-style: italic;
     background: linear-gradient(135deg, #fff 0%, #a1a1aa 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
