@@ -39,7 +39,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    margin-left: -3.6%;
+    margin-left: -2%;
 }
 
 .logo-area a {
@@ -49,13 +49,13 @@
 }
 
 .navbar-logo-img {
-    height: 40px;
+    height: 49px;
     width: auto;
     object-fit: contain;
     transition: transform 0.3s ease;
     position: relative;
     z-index: 2;
-    margin-left: 40%;
+    margin-left: 25%;
 }
 
 /* Nav Menu Container */
