@@ -204,8 +204,6 @@
 .philosophy-bottom {
     position: relative;
     z-index: 2;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    /* Subtle divider for dark bg */
     padding-top: 3rem;
 }
 
@@ -223,8 +221,6 @@
 
 /* Middle card has left/right borders for separation in the mockup */
 .middle-card {
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
     padding-left: 2rem;
     padding-right: 2rem;
 }
@@ -288,8 +284,8 @@
     .middle-card {
         border-left: none;
         border-right: none;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: none;
+        border-bottom: none;
         padding: 2.5rem 0;
     }
 
