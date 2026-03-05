@@ -13,9 +13,9 @@
 .nav-inner {
     background-color: transparent;
     border-bottom: 1px solid transparent;
-    padding: 24px 5%;
-    width: 97%;
-    max-width: 94%;
+    padding: 24px 2rem;
+    width: 100%;
+    max-width: 1300px;
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
     display: flex;
@@ -24,12 +24,13 @@
     position: relative;
     z-index: 1001;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    flex-wrap: nowrap;
 }
 
 .navbar.scrolled .nav-inner {
     background-color: rgba(9, 9, 11, 0.7);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 15px 5%;
+    padding: 15px 2rem;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
 }
@@ -39,23 +40,28 @@
     display: flex;
     align-items: center;
     position: relative;
-    margin-left: -2%;
+    margin-left: -10px;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .logo-area a {
     display: flex;
     align-items: center;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 .navbar-logo-img {
-    height: 59px;
+    height: 62px;
     width: auto;
+    min-width: 190px;
+    max-width: 280px;
     object-fit: contain;
     transition: transform 0.3s ease;
     position: relative;
     z-index: 2;
-    margin-left: 19%;
+    margin-left: 0;
 }
 
 /* Nav Menu Container */
