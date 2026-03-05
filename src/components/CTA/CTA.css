@@ -67,37 +67,7 @@
     }
 }
 
-.cta-bg-img {
-    position: absolute;
-    width: 120px;
-    height: auto;
-    opacity: 0.12;
-    z-index: 0;
-    pointer-events: none;
-    animation: floatImg 6s infinite alternate ease-in-out;
-}
 
-.cta-bg-img-1 {
-    top: 5%;
-    left: -20px;
-    transform: rotate(-15deg);
-}
-
-.cta-bg-img-2 {
-    bottom: -10px;
-    right: -10px;
-    width: 100px;
-    transform: rotate(20deg);
-    animation-delay: -2s;
-}
-
-.cta-bg-img-3 {
-    top: 40%;
-    right: 5%;
-    width: 80px;
-    transform: rotate(-10deg);
-    animation-delay: -4s;
-}
 
 .cta-tagline {
     display: inline-block;
@@ -155,11 +125,11 @@
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    padding: 20px 45px;
-    font-size: 1.15rem;
+    padding: 16px 32px;
+    font-size: 1.05rem;
     font-weight: 600;
-    border-radius: 100px;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 40px;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
     background: linear-gradient(90deg, #FF3BFF, #5C24FF, #D94FD5, #FF3BFF);
     background-size: 200% auto;
     animation: gradientMove 4s linear infinite;

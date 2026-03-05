@@ -2,11 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import './Testimonials.css';
 
 // SVG for Star
-const StarIcon = () => (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="#FBBF24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-    </svg>
-);
+
 
 const reviews = [
     {
@@ -69,8 +65,7 @@ const Testimonials = () => {
         <section className="testimonials-section container">
             <div className="testimonials-header-group">
                 <div className="testimonials-badge">
-                    <span className="badge-line"></span>
-                    <h4 className="badge-text">TESTIMONIAL</h4>
+                    <h4 className="badge-text text-gradient">TESTIMONIAL</h4>
                 </div>
                 <h2 className="testimonials-headline">
                     Trust that started with <br /> the first project
@@ -92,10 +87,7 @@ const Testimonials = () => {
                     </div>
                     <div className="testimonial-card-content">
                         <div className="testimonial-card-top">
-                            <div className="testimonial-rating">
-                                <span className="rating-number">{currentReview.rating}</span>
-                                <StarIcon />
-                            </div>
+
                             <div className="testimonial-user-info">
                                 <h3 className="user-name">{currentReview.name}</h3>
                                 <p className="user-title">{currentReview.title}</p>
@@ -119,7 +111,7 @@ const Testimonials = () => {
                                     />
                                 ))}
                             </div>
-                            <a href="#" className="drop-comment-link">Drop Comment</a>
+
                         </div>
                     </div>
                 </div>

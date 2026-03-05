@@ -1,6 +1,6 @@
 import React from 'react';
 import './CTA.css';
-import { FiArrowUpRight } from 'react-icons/fi';
+
 
 const CTA = () => {
     return (
@@ -11,9 +11,7 @@ const CTA = () => {
                 <div className="cta-blob cta-blob-2"></div>
 
                 {/* Decorative Background Images */}
-                <img src="/herro.png" alt="" className="cta-bg-img cta-bg-img-1" />
-                <img src="/herro.png" alt="" className="cta-bg-img cta-bg-img-2" />
-                <img src="/herro.png" alt="" className="cta-bg-img cta-bg-img-3" />
+
 
                 <div className="cta-content text-center">
                     <span className="cta-tagline">Scale Your Vision</span>
@@ -26,7 +24,6 @@ const CTA = () => {
                     <div className="cta-action">
                         <button className="btn-primary cta-btn">
                             Get Started
-                            <FiArrowUpRight className="btn-icon" />
                         </button>
                     </div>
                 </div>

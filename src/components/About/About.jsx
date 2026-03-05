@@ -27,6 +27,18 @@ const SparklesIcon = () => (
     </svg>
 );
 
+const ZapIcon = () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="url(#zap_grad)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <defs>
+            <linearGradient id="zap_grad" x1="3" y1="2" x2="21" y2="22" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#b062eb" />
+                <stop offset="1" stopColor="#ed67ae" />
+            </linearGradient>
+        </defs>
+    </svg>
+);
+
 const About = () => {
     return (
         <section className="about-section container" id="about">
@@ -70,7 +82,7 @@ const About = () => {
 
                         <div className="feature-card">
                             <div className="feature-icon">
-                                <SparklesIcon />
+                                <ZapIcon />
                             </div>
                             <div className="feature-info">
                                 <h3 className="feature-title">Tech Driven</h3>

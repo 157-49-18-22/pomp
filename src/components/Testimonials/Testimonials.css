@@ -16,19 +16,12 @@
     margin-bottom: 1rem;
 }
 
-.badge-line {
-    width: 30px;
-    height: 2px;
-    background-color: var(--color-primary);
-    display: inline-block;
-}
-
 .badge-text {
-    color: var(--color-primary);
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     margin: 0;
+    text-transform: uppercase;
 }
 
 .testimonials-headline {
@@ -95,20 +88,10 @@
     margin-bottom: 1.5rem;
 }
 
-.testimonial-rating {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
 
-.rating-number {
-    font-size: 1.8rem;
-    font-weight: 700;
-    font-family: 'Outfit', sans-serif;
-}
 
 .testimonial-user-info {
-    text-align: right;
+    text-align: left;
 }
 
 .user-name {
@@ -166,16 +149,7 @@
     border-radius: 10px;
 }
 
-.drop-comment-link {
-    color: #fff;
-    text-decoration: underline;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
 
-.drop-comment-link:hover {
-    color: var(--color-primary);
-}
 
 @keyframes fadeIn {
     from {

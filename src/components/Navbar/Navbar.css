@@ -30,7 +30,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    margin-left: -3.7%;
+    margin-left: -3.6%;
 }
 
 .logo-area a {
@@ -65,7 +65,8 @@
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 2.5rem;
+    gap: 2rem;
+    align-items: center;
 }
 
 .nav-links a {
@@ -80,6 +81,41 @@
 
 .nav-links a:hover {
     color: #fff;
+}
+
+.nav-links a.nav-contact-btn {
+    padding: 10px 22px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    background-clip: padding-box;
+    font-family: 'Outfit', sans-serif;
+    color: #fff;
+}
+
+.nav-links a.nav-contact-btn:hover {
+    border-color: transparent;
+    background-image: linear-gradient(#0b0b0d, #0b0b0d), linear-gradient(90deg, #FF3BFF, #ECBFBF, #5C24FF, #D94FD5, #FF3BFF);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    background-size: 100% 100%, 300% 100%;
+    animation: border-move 3s linear infinite;
+    transform: translateY(-1px);
+    color: #fff;
+}
+
+@keyframes border-move {
+    0% {
+        background-position: 0% 0%, 0% 50%;
+    }
+
+    50% {
+        background-position: 0% 0%, 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 0%, 0% 50%;
+    }
 }
 
 /* Social Links */

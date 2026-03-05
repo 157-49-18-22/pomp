@@ -45,7 +45,7 @@ const TrendingIcon = () => (
 const Capabilities = () => {
     const [activeIndex, setActiveIndex] = useState(1);
     const [phase, setPhase] = useState('center');
-    const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+    const [isAutoPlaying, setIsAutoPlaying] = useState(false);
     const [hoverIndex, setHoverIndex] = useState(null);
     const sectionRef = useRef(null);
 
@@ -146,11 +146,9 @@ const Capabilities = () => {
                                     transitionDelay,
                                 }}
                                 onMouseEnter={() => {
-                                    setIsAutoPlaying(false);
                                     setHoverIndex(i);
                                 }}
                                 onMouseLeave={() => {
-                                    setIsAutoPlaying(true);
                                     setHoverIndex(null);
                                 }}
                                 onClick={() => setActiveIndex(i)}
@@ -173,7 +171,6 @@ const Capabilities = () => {
                     })}
                 </div>
             </div>
-
             <div className="carousel-pagination">
                 {cards.map((_, idx) => (
                     <button
@@ -183,6 +180,8 @@ const Capabilities = () => {
                     />
                 ))}
             </div>
+
+
         </section>
     );
 };

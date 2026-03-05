@@ -315,48 +315,7 @@
     background: currentColor;
 }
 
-.real-ui-bottombar {
-    position: absolute;
-    bottom: 6px;
-    left: 8px;
-    right: 8px;
-    height: 28px;
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 14px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 20;
-    border: 0.5px solid rgba(255, 255, 255, 0.15);
-}
 
-.light-ui .real-ui-bottombar {
-    background: rgba(255, 255, 255, 0.6);
-    border: 0.5px solid rgba(0, 0, 0, 0.05);
-}
-
-.ui-tab {
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.3);
-    transition: all 0.3s ease;
-}
-
-.light-ui .ui-tab {
-    background: rgba(0, 0, 0, 0.15);
-}
-
-.ui-tab.active {
-    background: #fff;
-    width: 20px;
-}
-
-.light-ui .ui-tab.active {
-    background: #000;
-}
 
 /* Rotations and Animations for 3D effect matching the mockup */
 .phone-back {

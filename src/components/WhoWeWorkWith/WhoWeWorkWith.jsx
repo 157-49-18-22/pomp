@@ -64,11 +64,7 @@ const MockupPhone = ({ imgUrl, isFront, uiMode }) => {
                     </div>
                 </div>
 
-                <div className="real-ui-bottombar">
-                    <div className="ui-tab active"></div>
-                    <div className="ui-tab"></div>
-                    <div className="ui-tab"></div>
-                </div>
+
             </div>
         </div>
     );

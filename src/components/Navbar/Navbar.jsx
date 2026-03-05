@@ -21,7 +21,7 @@ const Navbar = () => {
                         <li><Link to="/#about" onClick={() => setIsMenuOpen(false)}>About Us</Link></li>
                         <li><Link to="/#services" onClick={() => setIsMenuOpen(false)}>Services</Link></li>
                         <li><Link to="/#work" onClick={() => setIsMenuOpen(false)}>Work</Link></li>
-                        <li><Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
+                        <li><Link to="/contact" className="nav-contact-btn" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
                     </ul>
 
                     {/* Decorative Hero Icons */}
