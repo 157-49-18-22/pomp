@@ -39,7 +39,8 @@
 .footer-desc {
     color: #a1a1aa;
     font-size: 0.95rem;
-    line-height: 1.5;
+    line-height: 2.2;
+    /* Adjusted to match the 1.1rem gap between items in 'Our Expertise' */
     margin-top: 0;
     margin-bottom: 1.2rem;
 }
@@ -100,7 +101,7 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 1.1rem;
+    gap: 0.62rem;
 }
 
 .footer-links a {
