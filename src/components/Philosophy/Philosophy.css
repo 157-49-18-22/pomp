@@ -179,9 +179,11 @@
     box-shadow: none;
     border: none;
     transition: transform 0.5s ease, filter 0.5s ease;
-    filter: saturate(1.1) contrast(1.1) brightness(1.0);
-    transform: scale(1.15) translate(2%, -2%);
-    /* Scale and shift to hide top-right watermark */
+    filter: saturate(1.2) contrast(1.1) brightness(0.95);
+    transform: scale(1.6) translate(10%, -8%);
+    /* Even more aggressive scale and shift to completely hide PixVerse watermark letters */
+    mix-blend-mode: screen;
+    pointer-events: none;
 }
 
 .philosophy-image-wrapper {
@@ -192,13 +194,13 @@
     position: relative;
     height: 22rem;
     overflow: hidden;
-    -webkit-mask-image: radial-gradient(circle at 50% 50%, black 40%, transparent 90%);
-    mask-image: radial-gradient(circle at 50% 50%, black 40%, transparent 90%);
+    -webkit-mask-image: radial-gradient(circle at 60% 50%, black 20%, transparent 85%);
+    mask-image: radial-gradient(circle at 60% 50%, black 20%, transparent 85%);
 }
 
 .philosophy-person:hover {
-    transform: translateY(-8px) scale(1.03);
-    filter: saturate(1.25) contrast(1.1) brightness(1.04);
+    transform: translateY(-8px) scale(1.65) translate(10%, -8%);
+    filter: saturate(1.4) contrast(1.1) brightness(1.0);
 }
 
 /* Mid Section */
