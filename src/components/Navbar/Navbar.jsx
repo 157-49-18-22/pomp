@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
@@ -24,17 +26,65 @@ const Navbar = () => {
             <div className={`nav-overlay ${isMenuOpen ? 'active' : ''}`} onClick={() => setIsMenuOpen(false)}></div>
             <div className={`nav-inner ${isMenuOpen ? 'menu-active' : ''}`}>
                 <div className="logo-area">
-                    <Link to="/" onClick={() => setIsMenuOpen(false)}>
+                    <a href="/" onClick={(e) => {
+                        e.preventDefault();
+                        setIsMenuOpen(false);
+                        if (location.pathname === '/') {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        } else {
+                            navigate('/');
+                        }
+                    }}>
                         <img src="/logo1.png" alt="Pomp &amp; Pepper Logo" className="navbar-logo-img" />
-                    </Link>
+                    </a>
                 </div>
 
                 <div className={`nav-menu-container ${isMenuOpen ? 'open' : ''}`}>
                     <ul className="nav-links">
-                        <li><Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link></li>
-                        <li><Link to="/#about" onClick={() => setIsMenuOpen(false)}>About Us</Link></li>
-                        <li><Link to="/#services" onClick={() => setIsMenuOpen(false)}>Services</Link></li>
-                        <li><Link to="/#work" onClick={() => setIsMenuOpen(false)}>Work</Link></li>
+                        <li>
+                            <a href="/" onClick={(e) => {
+                                e.preventDefault();
+                                setIsMenuOpen(false);
+                                if (location.pathname === '/') {
+                                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                } else {
+                                    navigate('/');
+                                }
+                            }}>Home</a>
+                        </li>
+                        <li>
+                            <a href="#about" onClick={(e) => {
+                                e.preventDefault();
+                                setIsMenuOpen(false);
+                                if (location.pathname === '/') {
+                                    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+                                } else {
+                                    navigate('/', { state: { scrollTo: 'about' } });
+                                }
+                            }}>About Us</a>
+                        </li>
+                        <li>
+                            <a href="#services" onClick={(e) => {
+                                e.preventDefault();
+                                setIsMenuOpen(false);
+                                if (location.pathname === '/') {
+                                    document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+                                } else {
+                                    navigate('/', { state: { scrollTo: 'services' } });
+                                }
+                            }}>Services</a>
+                        </li>
+                        <li>
+                            <a href="#work" onClick={(e) => {
+                                e.preventDefault();
+                                setIsMenuOpen(false);
+                                if (location.pathname === '/') {
+                                    document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' });
+                                } else {
+                                    navigate('/', { state: { scrollTo: 'work' } });
+                                }
+                            }}>Work</a>
+                        </li>
                         <li><Link to="/contact" className="nav-contact-btn" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
                     </ul>
 

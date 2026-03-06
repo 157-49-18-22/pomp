@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import './Footer.css';
 
 // Small 3D Ribbon for Footer (top logo area)
@@ -48,6 +48,18 @@ const EmailIcon = () => (
 );
 
 const Footer = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const handleFooterNav = (e, targetId) => {
+        e.preventDefault();
+        if (location.pathname === '/') {
+            document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            navigate('/', { state: { scrollTo: targetId } });
+        }
+    };
+
     return (
         <footer className="footer-section">
             <div className="container footer-content-wrap">
@@ -57,10 +69,10 @@ const Footer = () => {
                     <div className="footer-links-col col-left">
                         <h4 className="footer-col-title">Our Expertise</h4>
                         <ul className="footer-links">
-                            <li><a href="#">GTM Strategy & Brand Foundations</a></li>
-                            <li><a href="#">Performance Marketing & Lead Gen</a></li>
-                            <li><a href="#">Experiential & Event Architecture</a></li>
-                            <li><a href="#">Creative Direction & Design</a></li>
+                            <li><a href="#about" onClick={(e) => handleFooterNav(e, 'about')}>GTM Strategy & Brand Foundations</a></li>
+                            <li><a href="#services" onClick={(e) => handleFooterNav(e, 'services')}>Performance Marketing & Lead Gen</a></li>
+                            <li><a href="#work" onClick={(e) => handleFooterNav(e, 'work')}>Experiential & Event Architecture</a></li>
+                            <li><a href="#services" onClick={(e) => handleFooterNav(e, 'services')}>Creative Direction & Design</a></li>
                         </ul>
                     </div>
 
@@ -70,7 +82,7 @@ const Footer = () => {
                         <p className="footer-desc">
                             <strong>Pomp & Pepper Marketing Pvt Ltd</strong><br />
                             hello@pompnpepper.com<br />
-                            HQ: Puri High Street, Sector 81, Faridabad, India
+                            Puri High Street, Sector 81, Faridabad, India
                         </p>
                     </div>
 

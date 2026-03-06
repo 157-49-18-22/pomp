@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Hero from '../components/Hero/Hero';
 import Stats from '../components/Stats/Stats';
 import About from '../components/About/About';
@@ -9,6 +10,20 @@ import Testimonials from '../components/Testimonials/Testimonials';
 import CTA from '../components/CTA/CTA';
 
 const Home = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.state && location.state.scrollTo) {
+            const element = document.getElementById(location.state.scrollTo);
+            if (element) {
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                    // Clear the state to prevent re-scrolling
+                    window.history.replaceState({}, document.title);
+                }, 100);
+            }
+        }
+    }, [location]);
     useEffect(() => {
         const observerOptions = {
             threshold: 0.1, // Lower threshold for mobile
@@ -25,18 +40,6 @@ const Home = () => {
 
         const revealElements = document.querySelectorAll('.reveal-on-scroll');
         revealElements.forEach(el => observer.observe(el));
-
-        // Force active state for hash-linked sections immediately
-        const hash = window.location.hash;
-        if (hash) {
-            const targetId = hash.replace('#', '');
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
-                // Find the reveal-on-scroll wrapper
-                const wrapper = targetSection.closest('.reveal-on-scroll');
-                if (wrapper) wrapper.classList.add('active');
-            }
-        }
 
         return () => observer.disconnect();
     }, []);

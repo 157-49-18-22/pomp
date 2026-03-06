@@ -1,8 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './CTA.css';
 
 
 const CTA = () => {
+    const navigate = useNavigate();
     return (
         <section className="cta-section container">
             <div className="cta-container">
@@ -22,7 +24,7 @@ const CTA = () => {
                         we have the infrastructure to make it happen.
                     </p>
                     <div className="cta-action">
-                        <button className="btn-primary cta-btn">
+                        <button className="btn-primary cta-btn" onClick={() => navigate('/contact')}>
                             Get Started
                         </button>
                     </div>

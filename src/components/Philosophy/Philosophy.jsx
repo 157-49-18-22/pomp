@@ -11,12 +11,6 @@ const Philosophy = () => {
                     <path className="graph-path path-1" d="M0 400 L200 350 L400 380 L600 300 L800 320 L1000 200 L1200 250 L1440 100" />
                     <path className="graph-path path-2" d="M0 380 L300 320 L600 350 L900 250 L1200 280 L1440 150" />
                 </svg>
-                <div className="float-arrow arrow-1">↑</div>
-                <div className="float-arrow arrow-2">↑</div>
-                <div className="float-arrow arrow-3">↑</div>
-                <div className="float-arrow arrow-4">↑</div>
-                <div className="float-arrow arrow-5">↑</div>
-                <div className="float-arrow arrow-6">↑</div>
             </div>
             <div className="philosophy-container container">
                 {/* Top Section: Text and Image */}
