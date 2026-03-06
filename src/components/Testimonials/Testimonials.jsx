@@ -24,8 +24,8 @@ const reviews = [
     },
     {
         id: 3,
-        name: "Marketing Manager",
-        title: "GIGABYTE",
+        name: "Preet Arora",
+        title: "Marketing Manager,GIGABYTE",
         rating: "5.0",
         avatar: "/leftt.png",
         text: "\"Pomp & Pepper understood our brand before we even finished our brief.\" From strategy to final build, they brought genuine care and sharp expertise to every stage. The booth they created didn't just represent us — it opened doors. Visitors gravitated toward it, conversations flowed naturally, and our team felt proud to stand in that space. They're the kind of partners you hope for but rarely find."
