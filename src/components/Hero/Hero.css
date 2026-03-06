@@ -62,8 +62,7 @@
 }
 
 .btn-primary {
-    background: linear-gradient(90deg, #FF3BFF, #ECBFBF, #5C24FF, #D94FD5, #FF3BFF);
-    background-size: 100% 100%;
+    background: #5C24FF;
     color: #fff;
     padding: 16px 32px;
     border-radius: 40px;
@@ -74,8 +73,7 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
-    /* Bouncy feel */
+    transition: all 0.3s ease;
 }
 
 .btn-icon {
@@ -84,8 +82,9 @@
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 15px 30px -5px rgba(217, 70, 239, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(92, 36, 255, 0.3);
+    background-color: #4b1dd1;
 }
 
 .btn-primary:hover .btn-icon {

@@ -8,11 +8,11 @@ import './Testimonials.css';
 const reviews = [
     {
         id: 1,
-        name: "Danny Sena",
-        title: "Co Founder Of Xyz Compny",
-        rating: "4.2",
+        name: "Piyush Munjal",
+        title: "Business Head India and SAARC, Micron",
+        rating: "5.0",
         avatar: "/leftt.png",
-        text: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat."
+        text: "Pomp & Pepper showed strong execution skills in digital, engagement, and experiential activations, delivering consistently with discipline. Their reporting, timelines, and teamwork made them a reliable extension of our team"
     },
     {
         id: 2,
@@ -69,10 +69,10 @@ const Testimonials = () => {
                     <h4 className="badge-text text-gradient">TESTIMONIAL</h4>
                 </div>
                 <h2 className="testimonials-headline">
-                    Trust that started with <br /> the first project
+                    Proven Impact. <br /> Measured Growth.
                 </h2>
                 <p className="testimonials-subtitle">
-                    Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever Since The 1500s, Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever Since The 1500s,
+                    Moving the needle for tech and lifestyle leaders through strategic storytelling and robust digital infrastructure.
                 </p>
             </div>
 

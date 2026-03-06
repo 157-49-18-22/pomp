@@ -139,7 +139,7 @@
 .philosophy-content {
     flex: 1;
     max-width: 750px;
-    padding-top: 2rem;
+    padding-top: 0;
 }
 
 .philosophy-content .section-subtitle {
@@ -171,7 +171,7 @@
 }
 
 .philosophy-person {
-    width: 100%;
+    width: 87%;
     max-width: 500px;
     height: auto;
     object-fit: cover;
@@ -190,13 +190,10 @@
     justify-content: flex-end;
     align-items: center;
     position: relative;
-    min-height: 372px;
-    margin-top: 1rem;
+    height: 19rem;
     overflow: hidden;
-    /* Ensure scaling is clipped */
-    /* Stronger mask to hide edges and watermark area */
-    -webkit-mask-image: radial-gradient(circle at 40% 50%, black 40%, transparent 90%);
-    mask-image: radial-gradient(circle at 40% 50%, black 40%, transparent 90%);
+    -webkit-mask-image: radial-gradient(circle at 50% 50%, black 40%, transparent 90%);
+    mask-image: radial-gradient(circle at 50% 50%, black 40%, transparent 90%);
 }
 
 .philosophy-person:hover {
@@ -204,29 +201,61 @@
     filter: saturate(1.25) contrast(1.1) brightness(1.04);
 }
 
+/* Mid Section */
+.philosophy-mid {
+    margin-bottom: 2rem;
+    padding: 0;
+}
+
+.growth-label {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.growth-label .line {
+    flex-grow: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+.growth-label .section-subtitle {
+    margin-bottom: 0;
+    white-space: nowrap;
+}
+
 /* Bottom Section */
 .philosophy-bottom {
     position: relative;
     z-index: 2;
-    padding-top: 3rem;
+    padding-top: 0;
 }
 
 .philosophy-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .philosophy-card {
-    padding: 1rem 1rem 1rem 0;
+    padding: 3rem 2.5rem;
     display: flex;
     flex-direction: column;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Middle card has left/right borders for separation in the mockup */
+.philosophy-card:last-child {
+    border-right: none;
+}
+
+.philosophy-card:first-child {
+    padding-left: 0;
+}
+
 .middle-card {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    border-left: none;
+    /* Already handled by previous card border-right */
 }
 
 /* Specific styling for light section text */

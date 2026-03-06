@@ -29,8 +29,7 @@ const Philosophy = () => {
                         </h2>
                         <p className="philosophy-desc">
                             By reverse-engineering your business goals, we create tailored GTM roadmaps
-                            focused on long-term impact rather than just tactical output. We build solutions
-                            around your specific stage of growth:
+                            focused on long-term impact rather than just tactical output.
                         </p>
                     </div>
 
@@ -46,7 +45,16 @@ const Philosophy = () => {
                     </div>
                 </div>
 
-                {/* Bottom Section: 3 Columns Background Image / Cards */}
+                {/* Growth Stage Header */}
+                <div className="philosophy-mid">
+                    <div className="growth-label">
+                        <span className="line"></span>
+                        <p className="section-subtitle text-gradient">STAGE OF GROWTH</p>
+                        <span className="line"></span>
+                    </div>
+                </div>
+
+                {/* Bottom Section: 3 Columns Cards */}
                 <div className="philosophy-bottom">
                     <div className="philosophy-grid">
 
