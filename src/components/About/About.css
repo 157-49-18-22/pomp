@@ -216,6 +216,11 @@
         margin-bottom: 2rem;
     }
 
+    .about-image-container {
+        display: none;
+        /* Hide visual card on mobile */
+    }
+
     .about-text p {
         font-size: 1rem;
     }

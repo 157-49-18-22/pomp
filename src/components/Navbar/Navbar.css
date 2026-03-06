@@ -226,9 +226,30 @@
     .nav-inner {
         width: 100%;
         max-width: none;
-        padding: 15px 5%;
+        padding: 12px 5%;
+        /* Slightly reduced padding */
         z-index: 2000;
         /* Move entire inner above overlay */
+    }
+
+    .navbar.scrolled .nav-inner {
+        padding: 12px 5%;
+        /* Consistent padding on scroll in mobile */
+        background-color: rgba(9, 9, 11, 0.95);
+        /* Slightly more solid on scroll for mobile */
+    }
+
+    .navbar-logo-img {
+        height: 42px;
+        /* reduced from 62px */
+        min-width: 130px;
+        /* reduced from 190px */
+        margin-left: -5px;
+        /* align more to the left */
+    }
+
+    .logo-area {
+        margin-left: 0;
     }
 
     .nav-menu-container {

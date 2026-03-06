@@ -248,6 +248,11 @@
 }
 
 @media (max-width: 600px) {
+    .footer-section {
+        padding: 4rem 1rem 0;
+        /* Reduced side padding for more space */
+    }
+
     .footer-top {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -278,8 +283,7 @@
     .footer-bottom {
         flex-direction: column-reverse;
         gap: 2rem;
-        padding: 3rem 0;
-        margin-left: 0rem;
+        padding: 2rem 0;
     }
 
     .legal-links {
@@ -292,5 +296,20 @@
         max-width: 80%;
     }
 
+    .copyright-text {
+        text-align: center;
+        line-height: 1.5;
+        font-size: 0.62rem;
+        /* Reduced to prevent cutting */
+        letter-spacing: -0.1px;
+        /* Tighter letter spacing to fit more */
+        width: 100%;
+        display: block;
+    }
 
+    .copyright-line {
+        display: block;
+        white-space: nowrap;
+        margin-bottom: 0.3rem;
+    }
 }

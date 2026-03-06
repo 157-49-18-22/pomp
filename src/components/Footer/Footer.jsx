@@ -98,7 +98,10 @@ const Footer = () => {
 
                 {/* Bottom Bar */}
                 <div className="footer-bottom">
-                    <p className="copyright-text">© 2026 Pomp & Pepper Marketing Pvt. Ltd. | All Rights Reserved. | Based in India, Serving Global Tech Ecosystems.</p>
+                    <p className="copyright-text">
+                        <span className="copyright-line">© 2026 Pomp & Pepper Marketing Pvt. Ltd. | All Rights Reserved.</span>
+                        <span className="copyright-line">Based in India, Serving Global Tech Ecosystems.</span>
+                    </p>
                 </div>
 
             </div>

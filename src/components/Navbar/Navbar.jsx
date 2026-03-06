@@ -38,10 +38,6 @@ const Navbar = () => {
                         <li><Link to="/contact" className="nav-contact-btn" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
                     </ul>
 
-                    {/* Decorative Hero Icons */}
-                    <img src="/hero.png" alt="" className="menu-bg-icon icon-1" />
-                    <img src="/hero.png" alt="" className="menu-bg-icon icon-2" />
-                    <img src="/hero.png" alt="" className="menu-bg-icon icon-3" />
 
                     <div className="social-links mobile-only">
                         <a href="https://www.instagram.com/pompnpepper?igsh=MXU1ZHNrcnVhNDZuZA==" target="_blank" rel="noopener noreferrer" className="social-icon">
