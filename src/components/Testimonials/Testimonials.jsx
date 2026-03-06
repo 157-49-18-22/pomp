@@ -16,27 +16,19 @@ const reviews = [
     },
     {
         id: 2,
-        name: "Yuki Driouech",
-        title: "Product Manager at ABC",
-        rating: "4.8",
+        name: "Ishaan Arya",
+        title: "VP, Nodwin",
+        rating: "5.0",
         avatar: "/leftt.png",
-        text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        text: "Pomp & Pepper team brings forth the understanding and bright ideas needed to execute large events. Comic Con audiences expect immersive brand experiences, and Pomp & Pepper delivered exactly that. The execution was creative, precise, and perfectly aligned with the energy of the event."
     },
     {
         id: 3,
-        name: "Logan Barnes",
-        title: "Creative Director",
-        rating: "4.5",
+        name: "Marketing Manager",
+        title: "GIGABYTE",
+        rating: "5.0",
         avatar: "/leftt.png",
-        text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
-    },
-    {
-        id: 4,
-        name: "Tatjana Hamilton",
-        title: "Tech Lead at StartUp",
-        rating: "4.7",
-        avatar: "/leftt.png",
-        text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident."
+        text: "\"Pomp & Pepper understood our brand before we even finished our brief.\" From strategy to final build, they brought genuine care and sharp expertise to every stage. The booth they created didn't just represent us — it opened doors. Visitors gravitated toward it, conversations flowed naturally, and our team felt proud to stand in that space. They're the kind of partners you hope for but rarely find."
     }
 ];
 
