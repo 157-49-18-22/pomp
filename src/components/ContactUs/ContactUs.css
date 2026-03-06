@@ -394,82 +394,90 @@
 
 @media (max-width: 600px) {
     .contactus-section {
-        padding: 40px 20px;
+        padding: 60px 1.25rem;
         overflow-x: hidden;
     }
 
     .contactus-container {
         width: 100%;
         box-sizing: border-box;
-        gap: 25px;
+        gap: 30px;
+    }
+
+    .contactus-form-card {
+        padding: 40px 20px;
     }
 
     .contactus-heading {
-        font-size: 2rem;
-        margin-bottom: 20px;
+        font-size: 2.2rem;
+        margin-bottom: 25px;
+        text-align: center;
     }
 
     .contactus-form-modern {
-        gap: 20px;
+        gap: 25px;
+    }
+
+    .contactus-row {
+        flex-direction: column;
+        gap: 25px;
     }
 
     .contactus-field label {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+        margin-bottom: 5px;
     }
 
     .contactus-field input,
     .contactus-field textarea {
-        font-size: 1rem;
-        padding: 8px 0;
+        font-size: 1.05rem;
+        padding: 10px 0;
     }
 
     .contactus-submit-btn {
         width: 100%;
-        padding: 14px;
-        font-size: 1rem;
-        margin-top: 10px;
+        padding: 16px;
+        font-size: 1.05rem;
+        margin-top: 15px;
     }
 
     .contactus-info-card {
-        padding: 30px 20px 60px 20px;
+        padding: 40px 20px 70px 20px;
     }
 
     .contactus-info-heading {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
+        font-size: 1.6rem;
+        margin-bottom: 25px;
+        text-align: center;
     }
 
     .contactus-info-list {
-        gap: 15px;
-        margin-bottom: 30px;
+        gap: 20px;
+        margin-bottom: 35px;
     }
 
     .contactus-info-item {
-        font-size: 0.9rem;
-        gap: 10px;
+        font-size: 0.95rem;
+        gap: 15px;
     }
 
     .contactus-info-socials {
-        margin-top: 25px;
+        margin-top: 30px;
+        justify-content: center;
     }
 
     .contactus-wm-text {
-        font-size: 1.2rem;
-    }
-
-    .contactus-wm-icon {
-        width: 24px;
-        height: 24px;
+        font-size: 1.4rem;
     }
 
     .contactus-map-card {
-        padding: 30px 20px;
-        border-radius: 20px;
+        padding: 35px 20px;
+        border-radius: 24px;
     }
 
     .office-location-header {
         flex-direction: column;
-        gap: 25px;
+        gap: 30px;
         text-align: center;
     }
 
@@ -479,41 +487,37 @@
     }
 
     .office-title {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         line-height: 1.2;
     }
 
     .office-subtitle {
-        font-size: 0.85rem;
-        padding: 0 10px;
+        font-size: 0.95rem;
+        padding: 0 5px;
     }
 
     .office-address-block {
-        padding: 15px 10px;
+        padding: 20px 15px;
         width: 100%;
         flex-direction: column;
         align-items: center;
-        gap: 8px;
+        gap: 12px;
     }
 
     .office-addr-line {
-        font-size: 0.9rem;
-        word-break: break-word;
+        font-size: 0.95rem;
     }
 
     .office-directions-btn {
-        width: fit-content;
-        padding: 12px 24px;
-        font-size: 0.9rem;
-        margin: 10px auto 0 auto;
+        width: 100%;
+        max-width: 280px;
+        padding: 14px 28px;
+        font-size: 1rem;
+        margin: 15px auto 0 auto;
         justify-content: center;
     }
 
-    .office-location-right {
-        width: 100%;
-    }
-
     .contactus-map-container iframe {
-        height: 250px;
+        height: 280px;
     }
 }

@@ -307,24 +307,56 @@
 }
 
 @media (max-width: 768px) {
+    .philosophy-wrapper {
+        padding: 4rem 1.25rem;
+    }
+
     .philosophy-title {
-        font-size: 2rem;
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+        letter-spacing: -1px;
+    }
+
+    .philosophy-desc {
+        font-size: 1rem;
+        line-height: 1.6;
     }
 
     .philosophy-grid {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
+        gap: 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .philosophy-card {
+        padding: 2.5rem 1rem;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .philosophy-card:last-child {
+        border-bottom: none;
     }
 
     .middle-card {
         border-left: none;
         border-right: none;
         border-top: none;
-        border-bottom: none;
-        padding: 2.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 2.5rem 1rem;
     }
 
     .card-number {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .card-title-light {
+        font-size: 1.15rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .card-text-light {
+        font-size: 0.9rem;
     }
 }

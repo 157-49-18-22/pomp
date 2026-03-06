@@ -208,38 +208,52 @@
 
 @media (max-width: 768px) {
     .about-section {
-        padding: 5rem 1.5rem;
+        padding: 4rem 1.25rem;
+        gap: 2.5rem;
     }
 
     .section-title {
-        font-size: 2.4rem;
-        margin-bottom: 2rem;
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+        letter-spacing: -1px;
     }
 
     .about-image-container {
         display: none;
-        /* Hide visual card on mobile */
+        /* Keep it clean for now as per previous design choice, but adjust spacing */
     }
 
     .about-text p {
-        font-size: 1rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
     }
 
     .features-grid {
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1.25rem;
+        width: 100%;
     }
 
     .feature-card {
         display: flex;
-        gap: 1.5rem;
+        gap: 1.25rem;
         text-align: left;
-        align-items: flex-start;
+        align-items: center;
+        padding: 1.25rem;
     }
 
     .feature-icon {
         margin-bottom: 0;
-        margin-top: 0.2rem;
         flex-shrink: 0;
+    }
+
+    .feature-title {
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .feature-text {
+        font-size: 0.85rem;
     }
 }

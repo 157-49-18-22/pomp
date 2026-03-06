@@ -44,8 +44,7 @@ button {
 /* When active (in view) */
 .reveal-on-scroll.active {
   opacity: 1;
-  transform: translateX(0);
-
+  transform: translate(0, 0);
 }
 
 /* Reset for elements that shouldn't animate */
