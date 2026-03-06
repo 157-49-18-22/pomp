@@ -29,7 +29,16 @@ const reviews = [
         rating: "5.0",
         avatar: "/leftt.png",
         text: "\"Pomp & Pepper understood our brand before we even finished our brief.\" From strategy to final build, they brought genuine care and sharp expertise to every stage. The booth they created didn't just represent us — it opened doors. Visitors gravitated toward it, conversations flowed naturally, and our team felt proud to stand in that space. They're the kind of partners you hope for but rarely find."
+    },
+       {
+        id: 4,
+        name: "Sachin Pandey",
+        title: "Head Of Marketing,  E-commerce Zotac",
+        rating: "5.0",
+        avatar: "/leftt.png",
+        text: "\"Our goal was to create POSM that not only showcased our GPUs but also communicated performance and innovation at the retail level.\" Pomp & Pepper translated this vision into retail-ready displays with meticulous attention to detail—delivering solutions that were both visually impactful and practical for store environments."
     }
+    
 ];
 
 const Testimonials = () => {
