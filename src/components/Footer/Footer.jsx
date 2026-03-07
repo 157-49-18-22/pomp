@@ -79,19 +79,21 @@ const Footer = () => {
                     {/* Column 2: Get in Touch */}
                     <div className="footer-links-col col-center">
                         <h4 className="footer-col-title">Get in Touch</h4>
-                        <p className="footer-desc">
-                            <strong>Pomp & Pepper Marketing Pvt Ltd</strong><br />
-                            hello@pompnpepper.com<br />
-                            Puri High Street, Sector 81, Faridabad, India
-                        </p>
+                        <div className="footer-desc-container">
+                            <div className="footer-desc-item" style={{ fontWeight: '600' }}>Pomp & Pepper Marketing Pvt Ltd</div>
+                            <div className="footer-desc-item">hello@pompnpepper.com</div>
+                            <div className="footer-desc-item">Puri High Street, Sector 81, Faridabad, India</div>
+                        </div>
                     </div>
 
                     {/* Column 3: New Business */}
                     <div className="footer-links-col col-right">
                         <h4 className="footer-col-title">New Business</h4>
-                        <p className="footer-desc">
-                            Interested in building together? Tell us about your objectives — we'll architect the solution.
-                        </p>
+                        <div className="footer-desc-container">
+                            <div className="footer-desc-item">
+                                Interested in building together? Tell us about your objectives — we'll architect the solution.
+                            </div>
+                        </div>
                         <Link to="/contact" style={{ textDecoration: 'none', display: 'flex', marginTop: '1.2rem', width: 'fit-content' }} className="btn-wrapper">
                             <button className="btn-get-started">
                                 Get in Touch
@@ -105,7 +107,7 @@ const Footer = () => {
 
                 {/* Watermark Image Row */}
                 <div className="footer-mark-wrapper">
-                    <img src="/mark.png" alt="Watermark" className="footer-mark-img" />
+                    <img src="logo1.png" alt="Watermark" className="footer-mark-img" />
                 </div>
 
                 {/* Bottom Bar */}

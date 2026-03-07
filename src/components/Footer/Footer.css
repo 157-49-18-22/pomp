@@ -36,12 +36,17 @@
     justify-content: flex-start;
 }
 
-.footer-desc {
+.footer-desc-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-desc-item {
     color: #a1a1aa;
     font-size: 0.95rem;
-    line-height: 2.3;
-    margin-top: 0;
-    margin-bottom: 1.5rem;
+    line-height: 1.8;
 }
 
 @keyframes gradient-move {
@@ -110,10 +115,10 @@
     color: #888;
     text-decoration: none;
     font-size: 0.95rem;
-    line-height: 1.7;
+    line-height: 1.8;
     /* Synchronized line-height */
     transition: all 0.3s ease;
-    display: inline-block;
+    display: block;
 }
 
 .footer-links a:hover {
@@ -204,7 +209,7 @@
     opacity: 0.15;
     user-select: none;
     pointer-events: none;
-    filter: brightness(0.8);
+    filter: brightness(1.5) grayscale(100%);
 }
 
 /* Bottom Bar */

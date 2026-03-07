@@ -43,7 +43,7 @@ const Philosophy = () => {
                 <div className="philosophy-mid">
                     <div className="growth-label">
                         <span className="line"></span>
-                        <p className="section-subtitle text-gradient">STAGE OF GROWTH</p>
+                        <p className="section-subtitle text-gradient">BY STAGE OF GROWTH</p>
                         <span className="line"></span>
                     </div>
                 </div>

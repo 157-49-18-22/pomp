@@ -43,7 +43,7 @@ const TrendingIcon = () => (
 );
 
 const Capabilities = () => {
-    const [activeIndex, setActiveIndex] = useState(1);
+    const [activeIndex, setActiveIndex] = useState(0);
     const [phase, setPhase] = useState('center');
     const [isAutoPlaying, setIsAutoPlaying] = useState(false);
     const [hoverIndex, setHoverIndex] = useState(null);
