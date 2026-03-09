@@ -65,36 +65,31 @@ const Footer = () => {
             <div className="container footer-content-wrap">
 
                 <div className="footer-top">
-                    {/* Column 1: Our Expertise */}
                     <div className="footer-links-col col-left">
                         <h4 className="footer-col-title">Our Expertise</h4>
-                        <ul className="footer-links">
-                            <li><a href="#about" onClick={(e) => handleFooterNav(e, 'about')}>GTM Strategy & Brand Foundations</a></li>
-                            <li><a href="#services" onClick={(e) => handleFooterNav(e, 'services')}>Performance Marketing & Lead Gen</a></li>
-                            <li><a href="#work" onClick={(e) => handleFooterNav(e, 'work')}>Experiential & Event Architecture</a></li>
-                            <li><a href="#services" onClick={(e) => handleFooterNav(e, 'services')}>Creative Direction & Design</a></li>
-                        </ul>
+                        <div className="footer-desc-container">
+                            <div className="footer-desc-item"><a href="#about" onClick={(e) => handleFooterNav(e, 'about')}>GTM Strategy & Brand Foundations</a></div>
+                            <div className="footer-desc-item"><a href="#services" onClick={(e) => handleFooterNav(e, 'services')}>Performance Marketing & Lead Gen</a></div>
+                            <div className="footer-desc-item"><a href="#work" onClick={(e) => handleFooterNav(e, 'work')}>Experiential & Event Architecture</a></div>
+                            <div className="footer-desc-item"><a href="#services" onClick={(e) => handleFooterNav(e, 'services')}>Creative Direction & Design</a></div>
+                        </div>
                     </div>
 
-                    {/* Column 2: Get in Touch */}
                     <div className="footer-links-col col-center">
                         <h4 className="footer-col-title">Get in Touch</h4>
                         <div className="footer-desc-container">
-                            <div className="footer-desc-item" style={{ fontWeight: '600' }}>Pomp & Pepper Marketing Pvt Ltd</div>
+                            <div className="footer-desc-item">Pomp & Pepper Marketing Pvt Ltd</div>
                             <div className="footer-desc-item">hello@pompnpepper.com</div>
                             <div className="footer-desc-item">Puri High Street, Sector 81, Faridabad, India</div>
                         </div>
                     </div>
 
-                    {/* Column 3: New Business */}
                     <div className="footer-links-col col-right">
                         <h4 className="footer-col-title">New Business</h4>
                         <div className="footer-desc-container">
-                            <div className="footer-desc-item">
-                                Interested in building together? Tell us about your objectives — we'll architect the solution.
-                            </div>
+                            <div className="footer-desc-item">Interested in building together? Tell us about your objectives — we'll architect the solution.</div>
                         </div>
-                        <Link to="/contact" style={{ textDecoration: 'none', display: 'flex', marginTop: '1.2rem', width: 'fit-content' }} className="btn-wrapper">
+                        <Link to="/contact" style={{ textDecoration: 'none', display: 'flex', width: 'fit-content' }} className="btn-wrapper">
                             <button className="btn-get-started">
                                 Get in Touch
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="btn-icon">
