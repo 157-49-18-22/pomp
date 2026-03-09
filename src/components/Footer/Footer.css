@@ -30,7 +30,7 @@
 
 .footer-links-col.col-right {
     text-align: left;
-    margin-top: -8px;
+    margin-top: 0.1rem;
     /* Nudge entire column up to match visual baseline */
 }
 
