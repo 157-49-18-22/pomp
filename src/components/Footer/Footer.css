@@ -41,6 +41,7 @@
 
 .col-right .btn-wrapper {
     justify-content: flex-start;
+    margin-top: 1rem;
 }
 
 .footer-desc-container {
