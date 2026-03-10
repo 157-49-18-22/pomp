@@ -230,6 +230,12 @@
 .copyright-text {
     color: #52525b;
     font-size: 0.9rem;
+    text-align: center;
+}
+
+.copyright-line {
+    display: block;
+    margin-bottom: 0.5rem;
 }
 
 .legal-links {
