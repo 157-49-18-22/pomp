@@ -34,7 +34,7 @@ const reviews = [
     {
         id: 4,
         name: "Sachin Pandey",
-        title: "Head Of Marketing & E-commerce, Zotac",
+        title: "Head Of Marketing & E-commerce, ZOTAC",
         rating: "5.0",
         avatar: "/leftt.png",
         text: "Our goal was to create POSM that not only showcased our GPUs but also communicated performance and innovation at the retail level. Pomp & Pepper translated this vision into retail-ready displays with meticulous attention to detail—delivering solutions that were both visually impactful and practical for store environments."
