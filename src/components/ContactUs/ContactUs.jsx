@@ -21,7 +21,7 @@ const ContactUs = () => {
                     <div className="contactus-top-section reveal-on-scroll">
                         <div className="contactus-form-card">
                             <h1 className="contactus-heading">Get in Touch</h1>
-                            <form className="contactus-form-modern" action="https://formspree.io/f/xovwregw" method="POST">
+                            <form className="contactus-form-modern" action="https://formspree.io/f/xwvwooqn" method="POST">
                                 <div className="contactus-row">
                                     <div className="contactus-field">
                                         {!(focus === 'name' || form.name) && <label>Name</label>}
