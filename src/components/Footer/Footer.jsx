@@ -80,7 +80,7 @@ const Footer = () => {
                         <div className="footer-desc-container">
                             <div className="footer-desc-item">Pomp & Pepper Marketing Pvt Ltd</div>
                             <div className="footer-desc-item">hello@pompnpepper.com</div>
-                            <div className="footer-desc-item">Puri High Street, Sector 81, Faridabad, India</div>
+                            <div className="footer-desc-item">Puri High Street, Faridabad 121002</div>
                         </div>
                     </div>
 
