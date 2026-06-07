@@ -94,7 +94,7 @@ const ContactUs = () => {
                                     <div className="contact-info-icon-wrapper">
                                         <FaMapMarkerAlt className="contactus-info-icon" />
                                     </div>
-                                    <span>320, Tower T3, RPS 12th Avenue, Sarai, Sector 27C, Faridabad 121004</span>
+                                    <span>Puri High Street, Faridabad 121002</span>
                                 </div>
                             </div>
 
@@ -115,13 +115,13 @@ const ContactUs = () => {
                                         </svg>
                                     </div>
                                     <div>
-                                        <p className="office-addr-line">320, Tower T3, RPS 12th Avenue, Sarai, Sector 27C</p>
-                                        <p className="office-addr-line">Faridabad, Haryana 121004</p>
+                                        <p className="office-addr-line">Puri High Street</p>
+                                        <p className="office-addr-line">Faridabad 121002</p>
                                         <p className="office-addr-line">India</p>
                                     </div>
                                 </div>
                                 <a
-                                    href="https://maps.google.com/?q=320,+Tower+T3,+RPS+12th+Avenue,+Sarai,+Sector+27C,+Faridabad+121004"
+                                    href="https://maps.google.com/?q=Puri+High+Street,+Faridabad+121002"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="office-directions-btn"
@@ -132,7 +132,7 @@ const ContactUs = () => {
                             <div className="office-location-right">
                                 <div className="contactus-map-container">
                                     <iframe
-                                        src="https://maps.google.com/maps?q=RPS+12th+Avenue,+Sarai,+Sector+27C,+Faridabad+121004&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                        src="https://maps.google.com/maps?q=Puri+High+Street,+Faridabad+121002&t=&z=15&ie=UTF8&iwloc=&output=embed"
                                         width="100%"
                                         height="380"
                                         style={{ border: 0, borderRadius: '20px' }}
